@@ -68,9 +68,6 @@
   (button :class "reg-btn dashbutton" :onclick "eww open dashboard --toggle" "舘")
 )
 
-
-
-;; ━━━ MEMORY ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 (defwidget mem [icon thickness]
   (box :vexpand "false" :hexpand "false"
     (circular-progress  :value {EWW_RAM.used_mem_perc}
