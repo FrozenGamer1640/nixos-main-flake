@@ -23,7 +23,7 @@ in
             screen bandw maintenance
             wf-recorder anki-bin
 
-            playerctl fastfetch
+            playerctl fastfetch cava
             google-chrome
             vesktop youtube-music
             inkscape osu-lazer-bin
