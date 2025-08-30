@@ -1,0 +1,3 @@
+[submodule "modules/eww/scripts/rusty-caway"]
+	path = modules/eww/scripts/rusty-caway
+	url = https://github.com/FrozenGamer1640/rusty-caway.git
