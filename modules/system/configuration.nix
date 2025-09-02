@@ -134,22 +134,6 @@
 	  NIXOS_OZONE_WL = "1";
   };
 
-  # Security
-  security = {
-    sudo.enable = false;
-    doas = {
-      enable = true;
-      extraRules = [{
-        users = [ "frozenfox" ];
-        keepEnv = true;
-        persist = true;
-      }];
-    };
-
-    # Extra security
-    protectKernelImage = true;
-  };
-
   security.rtkit.enable = true;
 
   services.pipewire = {
