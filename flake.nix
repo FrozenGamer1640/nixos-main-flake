@@ -23,6 +23,11 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { home-manager, nixpkgs, nur, ... }@inputs:
@@ -44,6 +49,8 @@
           ./modules/system/configuration.nix
           # Host-specific hardware config
           (./. + "/hosts/${hostname}/hardware-configuration.nix")
+          # Stylix
+          inputs.stylix.nixosModules.stylix
         ];
         specialArgs = { inherit inputs; };
       };
