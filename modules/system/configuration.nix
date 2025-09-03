@@ -5,12 +5,14 @@
   #environment.defaultPackages = [ ];
   #services.xserver.desktopManager.xterm.enable = false;
   nixpkgs.config.allowUnfree = true;
+  programs.dconf.enable = true;
 
   #programs.zsh.enable = true;
 
   # Laptop-specific packages (the other ones are installed in `packages.nix`)
   environment.systemPackages = with pkgs; [
     acpi tlp home-manager
+    inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
   ];
 
   # Install fonts
