@@ -25,7 +25,7 @@
     };
 
     stylix = {
-      url = "github:nix-community/stylix";
+      url = "github:nix-community/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -67,6 +67,8 @@
           }
           # User-specific configuration
           (./. + "/hosts/${hostname}/user.nix")
+          # Stylix
+          inputs.stylix.homeModules.stylix
         ];
         extraSpecialArgs = { inherit inputs; } // extraArgs;
       };

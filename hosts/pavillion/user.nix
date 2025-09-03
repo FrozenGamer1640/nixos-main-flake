@@ -16,6 +16,7 @@ in
         # system
         modules.xdg
         modules.packages
+        modules.stylix
     ];
 }
 

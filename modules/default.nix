@@ -18,4 +18,5 @@
   # system
   xdg = ./xdg;
   packages = ./packages;
+  stylix = ./stylix;
 }
