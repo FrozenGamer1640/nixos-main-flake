@@ -4,7 +4,7 @@
 
 (deflisten caway_output
   :initial "▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁"
-	"./scripts/rusty-caway/target/debug/rusty-caway --bars 70")
+	"$HOME/mysystem/modules/eww/scripts/rusty-caway/target/debug/rusty-caway --bars 70")
 
 (defvar volume-level 50)
 (defvar volume-muted false)
