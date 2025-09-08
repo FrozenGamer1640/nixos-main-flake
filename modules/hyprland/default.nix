@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     wofi swaybg wlsunset wl-clipboard hyprland kitty swww
-    hyprpolkitagent wireplumber
+    hyprpolkitagent wireplumber grimblast
   ];
 
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
