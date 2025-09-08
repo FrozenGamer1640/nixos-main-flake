@@ -7,12 +7,10 @@
   nixpkgs.config.allowUnfree = true;
   programs.dconf.enable = true;
 
-  services = {
-    displayManager.sddm.enable = true;
-    xserver = {
-      enable = true;
-      desktopManager.gnome.enable = false;
-    };
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = false;
   };
 
 
