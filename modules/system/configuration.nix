@@ -3,9 +3,18 @@
 {
   # Remove unecessary preinstalled packages
   #environment.defaultPackages = [ ];
-  #services.xserver.desktopManager.xterm.enable = false;
+
   nixpkgs.config.allowUnfree = true;
   programs.dconf.enable = true;
+
+  services = {
+    displayManager.sddm.enable = true;
+    xserver = {
+      enable = true;
+      desktopManager.gnome.enable = false;
+    };
+  };
+
 
   #programs.zsh.enable = true;
 
