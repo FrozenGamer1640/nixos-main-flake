@@ -6,17 +6,21 @@ in
 {
     home.stateVersion = "25.05";
     imports = [
+        # system
+        modules.stylix
+        modules.xdg
+        modules.packages
+
+        # cli
+        modules.git
+
+
         # gui
         modules.eww
         modules.dunst
         modules.wofi
         modules.hyprland
         modules.vscode
-
-        # system
-        modules.xdg
-        modules.packages
-        modules.stylix
     ];
 }
 

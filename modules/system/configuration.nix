@@ -6,11 +6,12 @@
 
   nixpkgs.config.allowUnfree = true;
   programs.dconf.enable = true;
+  programs.xwayland.enable = true;
 
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = false;
+    #displayManager.gdm.enable = true;
+    #desktopManager.gnome.enable = false;
   };
 
 
@@ -54,7 +55,7 @@
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
     ];
-    # gtkUsePortal = true;
+    gtkOpenUsePortal = true;
   };
 
   # Nix settings, auto cleanup and enable flakes
@@ -80,7 +81,7 @@
       systemd-boot.enable = true;
       systemd-boot.editor = false;
       efi.canTouchEfiVariables = true;
-      timeout = 20;
+      timeout = 25;
     };
   };
 

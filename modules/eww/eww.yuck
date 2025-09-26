@@ -198,8 +198,6 @@
 	(transform
 		:rotate 50
 		:transform-origin-x "50%" :transform-origin-y "50%"
-    :scale-y "160%"
-    :translate-y "-40%"
 		(eventbox
       :onclick "./scripts/toggle_player_info.sh"
       :class "cava"

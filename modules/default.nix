@@ -11,7 +11,7 @@
   # cli
   #./nvim
   #./zsh
-  #./git
+  git = ./git;
   #./gpg
   #./direnv
 

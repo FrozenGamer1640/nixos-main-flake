@@ -7,23 +7,28 @@ let
     maintenance = pkgs.writeShellScriptBin "maintenance" ''${builtins.readFile ./maintenance}'';
 in
 {
-  home.packages = with pkgs; [
-    ripgrep ffmpeg tealdeer
-    # exa
-    btop fzf
-    pass gnupg bat
-    unzip lowdown zk
-    grim slurp slop
-    imagemagick age libnotify
-    git lua zig
-    mpv pqiv
-    screen bandw maintenance
-    wf-recorder anki-bin
+  programs = {
+    mpv.enable = true;
+    ripgrep.enable = true;
+    btop.enable = true;
+    gpg.enable = true;
+    fastfetch.enable = true;
+    cava.enable = true;
+    obs-studio.enable = true;
+  };
 
-    playerctl fastfetch cava
+  home.packages = with pkgs; [
+    screen bandw maintenance
+    wl-clicker
+    pass age
+    imagemagick libnotify
+    lua inkscape
+    anki-bin helvum
+
+    playerctl p7zip
     google-chrome
-    vesktop youtube-music
-    inkscape osu-lazer-bin
-    helvum killall
+    youtube-music vesktop
+    osu-lazer-bin prismlauncher
+    killall
   ];
 }
