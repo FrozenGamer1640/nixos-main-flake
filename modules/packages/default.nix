@@ -29,6 +29,6 @@ in
     google-chrome
     youtube-music vesktop
     osu-lazer-bin prismlauncher
-    killall
+    killall inotify-tools
   ];
 }

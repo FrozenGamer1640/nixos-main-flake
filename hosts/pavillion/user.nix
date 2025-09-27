@@ -14,7 +14,6 @@ in
         # cli
         modules.git
 
-
         # gui
         modules.eww
         modules.dunst

@@ -1,8 +1,11 @@
 { inputs, lib, config, pkgs, ... }:
 
 {
+  programs.eww = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [
-    eww
     pamixer
     brightnessctl
   ];
