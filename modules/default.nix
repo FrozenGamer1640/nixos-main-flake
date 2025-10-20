@@ -1,7 +1,5 @@
 {
   # gui
-  #./firefox
-  #./foot
   eww = ./eww;
   dunst = ./dunst;
   hyprland = ./hyprland;
@@ -9,11 +7,7 @@
   vscode = ./vscode;
 
   # cli
-  #./nvim
-  #./zsh
   git = ./git;
-  #./gpg
-  #./direnv
 
   # system
   xdg = ./xdg;

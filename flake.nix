@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    unstable-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
@@ -36,7 +37,7 @@
     };
   };
 
-  outputs = { home-manager, nixpkgs, nur, ... }@inputs:
+  outputs = { home-manager, nixpkgs, unstable-nixpkgs, nur, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -44,6 +45,10 @@
       config = {
         allowUnfree = true;
       };
+    };
+    unstable-pkgs = import unstable-nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
 
@@ -76,7 +81,7 @@
           # Stylix
           inputs.stylix.homeModules.stylix
         ];
-        extraSpecialArgs = { inherit inputs; } // extraArgs;
+        extraSpecialArgs = { inherit inputs unstable-pkgs; } // extraArgs;
       };
   in {
     nixosConfigurations = {

@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     pamixer
     brightnessctl
+    inotify-tools
   ];
 
   home.file.".config/eww/eww.scss".source = ./eww.scss;

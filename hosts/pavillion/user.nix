@@ -1,4 +1,4 @@
-{ config, lib, inputs, pkgs, ...}:
+{ config, lib, inputs, pkgs, unstable-pkgs,...}:
 
 let
   modules = import ../../modules/default.nix;
