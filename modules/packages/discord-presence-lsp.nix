@@ -3,7 +3,7 @@
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "discord-presence-lsp";
   version = "d6622e5d4dbbf9f61764458c2b50ba2e58789307";
-  cargoHash = "sha256-nl5loabpdQZZdKIgiI2dDDbq0etZgTXsPeknnEsl5ds=";
+  cargoHash = "sha256-JLNCEeo9fKeV4vTtPs+Yj2wRO1RKP2fuetrPlXcPBjA=";
 
   src = pkgs.fetchFromGitHub {
     owner = "xhyrom";
