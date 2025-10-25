@@ -24,12 +24,12 @@ in
     wl-clicker
     imagemagick libnotify
     lua inkscape
-    anki-bin helvum
-    discord-presence-lsp
+    anki-bin p7zip
+    discord-presence-lsp nil
 
     unstable-pkgs.zed-editor
     cosmic-files
-    playerctl p7zip
+    playerctl pavucontrol helvum
     google-chrome
     youtube-music vesktop
     osu-lazer-bin prismlauncher
