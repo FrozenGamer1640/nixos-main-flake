@@ -80,7 +80,7 @@
       (dummy-button)
       (dummy-button)
       (dummy-button)
-      ;(battery-info)
+      (battery-info)
       ;(wifi)
       ;(mem :thickness 4 :icon "")
       ;(cpu :thickness 4 :icon "")
@@ -280,9 +280,11 @@
 )
 
 (defwidget battery-info []
-	(linear-progress-button
-    :value battery-percent
-    :icon "${osu-textures-path}/Icons/settings.png")
+	; (linear-progress-button
+ ;    :value battery-percent
+ ;    :icon "${osu-textures-path}/Icons/settings.png"
+	; )
+	battery-percent
 )
 
 (defwidget time []
