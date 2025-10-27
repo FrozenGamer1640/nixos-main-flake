@@ -1,10 +1,8 @@
-{ pkgs, ... }:
-
+{ ezModules, ... }:
+let
+  stylixConfig = ezModules.stylix;
+in
 {
-  home.packages = with pkgs; [
-    dunst
-  ];
-
   services.dunst = {
     enable = true;
     settings = {

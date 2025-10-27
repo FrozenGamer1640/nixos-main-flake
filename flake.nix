@@ -1,97 +1,57 @@
 {
-  description = "FrozenFox's system main flake";
-
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    unstable-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    seanime = {
-      url = "github:rishabh5321/seanime-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
     };
-
+    ez-configs = {
+      url = "github:ehllie/ez-configs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    rose-pine-hyprcursor = {
-      url = "github:ndom91/rose-pine-hyprcursor";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprlang.follows = "hyprland/hyprlang";
     };
   };
 
-  outputs = { home-manager, nixpkgs, unstable-nixpkgs, nur, ... }@inputs:
-  let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-      };
-    };
-    unstable-pkgs = import unstable-nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
-    };
-    lib = nixpkgs.lib;
+  outputs = inputs @ { flake-parts, ... }:
+  flake-parts.lib.mkFlake { inherit inputs; }
+  {
+    debug = true;
+    systems = [ "x86_64-linux" ];
 
-    mkSystem = { hostname }:
-      lib.nixosSystem {
-        inherit system;
-        modules = [
-          # General configuration
-          ./modules/system/configuration.nix
-          # Host-specific hardware config
-          (./. + "/hosts/${hostname}/hardware-configuration.nix")
-          # Stylix
-          inputs.stylix.nixosModules.stylix
-        ];
-        specialArgs = { inherit inputs; };
+    imports = [
+      inputs.ez-configs.flakeModule
+    ];
+
+    ezConfigs = {
+      root = ./.;
+      earlyModuleArgs = { inherit inputs; };
+
+      globalArgs = {
+        stylix = {
+          nixos = inputs.stylix.nixosModules.stylix;
+          home = inputs.stylix.homeModules.stylix;
+          config = ./modules/stylix;
+        };
       };
 
-    mkUser = { user, hostname, extraArgs ? { } }:
-      home-manager.lib.homeManagerConfiguration {
-        #inherit system;
-        inherit pkgs;
-        modules = [
-          # Set username and home directory from the function arguments
-          {
-            home.username = user;
-            home.homeDirectory = "/home/${user}";
-          }
-          # User-specific configuration
-          (./. + "/hosts/${hostname}/user.nix")
-          # Stylix
-          inputs.stylix.homeModules.stylix
-        ];
-        extraSpecialArgs = { inherit inputs unstable-pkgs; } // extraArgs;
+      nixos = {
+        configurationsDirectory = ./hosts;
+        modulesDirectory = ./modules/nixos;
       };
-  in {
-    nixosConfigurations = {
-      pavillion = mkSystem { hostname = "pavillion"; };
-    };
 
-    homeConfigurations = {
-      frozenfox = mkUser {
-        user = "frozenfox";
-        hostname = "pavillion";
+      home = {
+        configurationsDirectory = ./users;
+        modulesDirectory = ./modules/home;
       };
     };
   };
