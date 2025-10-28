@@ -34,14 +34,9 @@
 
     ezConfigs = {
       root = ./.;
-      earlyModuleArgs = { inherit inputs; };
-
-      globalArgs = {
-        stylix = {
-          nixos = inputs.stylix.nixosModules.stylix;
-          home = inputs.stylix.homeModules.stylix;
-          config = ./modules/stylix;
-        };
+      earlyModuleArgs = {
+        inherit inputs;
+        stylixModule = ./modules/stylix;
       };
 
       nixos = {

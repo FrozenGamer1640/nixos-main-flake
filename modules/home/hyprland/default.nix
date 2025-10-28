@@ -15,17 +15,10 @@
   };
 
   home.packages = with pkgs; [
-    # --- Core ---
     kitty
-
-    # --- UI & Theming ---
     wofi swww
-
-    # --- Utilities ---
-    wl-clipboard grimblast blueman
+    wl-clipboard grimblast
   ];
-
-  #home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
 
   home.sessionVariables = {
     XCURSOR_SIZE = "24";

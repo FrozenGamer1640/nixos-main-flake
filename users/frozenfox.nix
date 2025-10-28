@@ -1,7 +1,6 @@
-{ ezModules, stylix, ... }:
+{ ezModules, ... }:
 {
   imports = [
-    stylix.home stylix.config
     ezModules.eww
   ];
 
