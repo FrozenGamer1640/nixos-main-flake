@@ -1,14 +1,18 @@
 { pkgs, ... }:
 
 {
-  programs.eww = {
-    enable = true;
+  programs = {
+    eww.enable = true;
+    jq.enable = true;
+    rigprep.enable = true;
   };
 
   home.packages = with pkgs; [
     pamixer
     brightnessctl
     inotify-tools
+    lua
+    cava
   ];
 
   home.file.".config/eww/eww.scss".source = ./eww.scss;

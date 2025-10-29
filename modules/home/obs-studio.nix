@@ -1,0 +1,2 @@
+{ ... }:
+{ imports = [ ./obs-studio ]; }

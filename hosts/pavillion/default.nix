@@ -37,7 +37,10 @@
 
   environment = {
     systemPackages = with pkgs; [
-      acpi tlp home-manager nixd
+      acpi tlp home-manager nixd libnotify nil killall
+      ripgrep btop p7zip imagemagick lua
+      playerctl pavucontrol helvum
+      inotify-tools fastfetch
       inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     ];
     sessionVariables = {

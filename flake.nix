@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
@@ -38,6 +39,14 @@
   };
 
   outputs = inputs @ { flake-parts, ... }:
+  let
+    attrSetFromDir = import ./modules/flake/attrSetFromDir.nix { lib = inputs.nixpkgs.lib; };
+    local-pkgs = attrSetFromDir {
+      directory = ./modules/packages;
+      pkgs = inputs.nixpkgs;
+      unstable-pkgs = inputs.nixpkgs-unstable;
+    };
+  in
   flake-parts.lib.mkFlake { inherit inputs; }
   {
     debug = true;
@@ -51,7 +60,9 @@
       root = ./.;
       earlyModuleArgs = {
         inherit inputs;
+        inherit local-pkgs;
         stylixModule = ./modules/stylix;
+        unstable-pkgs = inputs.nixpkgs-unstable;
       };
 
       nixos = {

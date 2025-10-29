@@ -1,0 +1,2 @@
+{ ... }:
+{ imports = [ ./zed-editor]; }
