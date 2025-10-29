@@ -1,4 +1,4 @@
-{ ezModules, pkgs, unstable-pkgs, ... }:
+{ ezModules, pkgs, ... }:
 {
   imports = with ezModules; [
     xdg gpg
@@ -23,8 +23,8 @@
   home.packages = with pkgs; [
     inkscape libresprite pixelorama
     google-chrome youtube-music
-    unstable-pkgs.osu-lazer-bin
-    unstable-pkgs.prismlauncher
+    pkgs.unstable.osu-lazer-bin
+    pkgs.unstable.prismlauncher
     anki-bin
     wl-clicker
   ];

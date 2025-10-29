@@ -1,9 +1,8 @@
 { lib, ... }:
-{ directory, pkgs, unstable-pkgs }:
+{ directory, pkgs}:
   let
     callPackage = lib.callPackageWith {
       inherit pkgs;
-      inherit unstable-pkgs;
     };
 
     allFiles = builtins.readDir directory;

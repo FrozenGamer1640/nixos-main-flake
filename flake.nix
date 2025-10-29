@@ -38,31 +38,47 @@
     };
   };
 
-  outputs = inputs @ { flake-parts, ... }:
-  let
-    attrSetFromDir = import ./modules/flake/attrSetFromDir.nix { lib = inputs.nixpkgs.lib; };
-    local-pkgs = attrSetFromDir {
-      directory = ./modules/packages;
-      pkgs = inputs.nixpkgs;
-      unstable-pkgs = inputs.nixpkgs-unstable;
-    };
-  in
+  outputs = inputs @ { flake-parts, nixpkgs, nixpkgs-unstable, self, ez-configs, ... }:
   flake-parts.lib.mkFlake { inherit inputs; }
-  {
+  ({
     debug = true;
     systems = [ "x86_64-linux" ];
 
     imports = [
       inputs.ez-configs.flakeModule
+      inputs.flake-parts.flakeModules.easyOverlay
     ];
+
+    perSystem = { system, ... }:
+    {
+      _module.args.pkgs = import inputs.nixpkgs {
+        inherit system;
+        overlays = [
+          inputs.foo.overlays.default
+          (final: prev:
+          let
+            attrSetFromDir = import ./modules/flake/attrSetFromDir.nix { lib = final.lib; };
+          in
+          {
+            unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+            local = attrSetFromDir {
+              pkgs = final;
+              unstable-pkgs = final.unstable;
+              directory = ./modules/packages;
+            };
+          })
+        ];
+      };
+    };
 
     ezConfigs = {
       root = ./.;
       earlyModuleArgs = {
         inherit inputs;
-        inherit local-pkgs;
         stylixModule = ./modules/stylix;
-        unstable-pkgs = inputs.nixpkgs-unstable;
       };
 
       nixos = {
@@ -75,5 +91,5 @@
         modulesDirectory = ./modules/home;
       };
     };
-  };
+  });
 }

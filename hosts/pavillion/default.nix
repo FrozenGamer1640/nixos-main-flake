@@ -2,7 +2,7 @@
 {
   imports = with ezModules; [
     ./hardware-configuration.nix
-    pipewire locale-es-cr
+    pipewire locale-es-cr fonts
   ];
 
   nixpkgs.config.allowUnfree = true;

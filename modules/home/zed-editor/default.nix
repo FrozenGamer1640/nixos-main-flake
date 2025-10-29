@@ -1,7 +1,7 @@
-{ local-pkgs, unstable-pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = [
-    local-pkgs.discord-presence-lsp
-    unstable-pkgs.zed-editor
+    pkgs.local.discord-presence-lsp
+    pkgs.unstable.zed-editor
   ];
 }
