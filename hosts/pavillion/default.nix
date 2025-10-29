@@ -69,7 +69,7 @@
 
   networking = {
     networkmanager.enable = true;
-    hostName = "Fuyuka's Pavillion Laptop";
+    hostName = "Fuyuka-s-Pavillion-Laptop";
     firewall.enable = true;
   };
 
