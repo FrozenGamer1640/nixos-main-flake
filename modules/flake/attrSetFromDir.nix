@@ -1,5 +1,5 @@
 { lib, ... }:
-{ directory, pkgs}:
+{ directory, pkgs }:
   let
     callPackage = lib.callPackageWith {
       inherit pkgs;

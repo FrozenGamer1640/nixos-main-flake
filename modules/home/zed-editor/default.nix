@@ -1,7 +1,11 @@
-{ pkgs, ... }:
+{ osConfig, ... }:
+let
+  unstable-pkgs = osConfig.fuyuExtras.unstable-pkgs;
+  local-pkgs = osConfig.fuyuExtras.local-pkgs;
+in
 {
   home.packages = [
-    pkgs.local.discord-presence-lsp
-    pkgs.unstable.zed-editor
+    local-pkgs.discord-presence-lsp
+    unstable-pkgs.zed-editor
   ];
 }

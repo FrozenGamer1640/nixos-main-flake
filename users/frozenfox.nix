@@ -1,4 +1,7 @@
-{ ezModules, pkgs, ... }:
+{ ezModules, pkgs, osConfig, ... }:
+let
+  unstable-pkgs = osConfig.fuyuExtras.unstable-pkgs;
+in
 {
   imports = with ezModules; [
     xdg gpg
@@ -8,6 +11,8 @@
     vesktop
     zed-editor
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   home = {
     stateVersion = "25.05";
@@ -23,8 +28,8 @@
   home.packages = with pkgs; [
     inkscape libresprite pixelorama
     google-chrome youtube-music
-    pkgs.unstable.osu-lazer-bin
-    pkgs.unstable.prismlauncher
+    unstable-pkgs.osu-lazer-bin
+    unstable-pkgs.prismlauncher
     anki-bin
     wl-clicker
   ];

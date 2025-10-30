@@ -4,7 +4,7 @@
   programs = {
     eww.enable = true;
     jq.enable = true;
-    rigprep.enable = true;
+    ripgrep.enable = true;
   };
 
   home.packages = with pkgs; [

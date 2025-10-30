@@ -14,7 +14,7 @@
       };
     };
     stylix = {
-      url = "github:nix-community/stylix";
+      url = "github:nix-community/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -38,52 +38,38 @@
     };
   };
 
-  outputs = inputs @ { flake-parts, nixpkgs, nixpkgs-unstable, self, ez-configs, ... }:
+  outputs = inputs @ { flake-parts, ... }:
   flake-parts.lib.mkFlake { inherit inputs; }
-  ({
+  ({ ... }:
+  let
+    attrSetFromDir = import ./modules/flake/attrSetFromDir.nix { inherit (inputs.nixpkgs) lib; };
+    xtraArgs = {
+      inherit inputs;
+      inherit attrSetFromDir;
+      stylixModule = ./modules/stylix;
+      localPkgsPath = ./modules/packages;
+    };
+  in
+  {
     debug = true;
     systems = [ "x86_64-linux" ];
 
     imports = [
       inputs.ez-configs.flakeModule
-      inputs.flake-parts.flakeModules.easyOverlay
     ];
-
-    perSystem = { system, ... }:
-    {
-      _module.args.pkgs = import inputs.nixpkgs {
-        inherit system;
-        overlays = [
-          inputs.foo.overlays.default
-          (final: prev:
-          let
-            attrSetFromDir = import ./modules/flake/attrSetFromDir.nix { lib = final.lib; };
-          in
-          {
-            unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-            local = attrSetFromDir {
-              pkgs = final;
-              unstable-pkgs = final.unstable;
-              directory = ./modules/packages;
-            };
-          })
-        ];
-      };
-    };
 
     ezConfigs = {
       root = ./.;
-      earlyModuleArgs = {
-        inherit inputs;
-        stylixModule = ./modules/stylix;
-      };
+      earlyModuleArgs = xtraArgs;
+      globalArgs = xtraArgs;
 
       nixos = {
         configurationsDirectory = ./hosts;
         modulesDirectory = ./modules/nixos;
+
+        hosts = {
+          pavillion.userHomeModules = [ "frozenfox" ];
+        };
       };
 
       home = {

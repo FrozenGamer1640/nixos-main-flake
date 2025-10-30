@@ -1,7 +1,4 @@
-{ ezModules, ... }:
-let
-  stylixConfig = ezModules.stylix;
-in
+{ ... }:
 {
   services.dunst = {
     enable = true;

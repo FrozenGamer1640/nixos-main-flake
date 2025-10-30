@@ -1,9 +1,28 @@
-{ inputs, pkgs, ezModules, ... }:
+{ inputs, pkgs, ezModules, attrSetFromDir, localPkgsPath, ... }:
+let
+  unstable-pkgs = import inputs.nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
+  local-pkgs = attrSetFromDir {
+    directory = localPkgsPath;
+    inherit pkgs;
+  };
+in
 {
   imports = with ezModules; [
     ./hardware-configuration.nix
     pipewire locale-es-cr fonts
   ];
+
+  fuyuExtras = {
+    unstable-pkgs = {
+      inherit (unstable-pkgs) osu-lazer-bin;
+      inherit (unstable-pkgs) zed-editor;
+      inherit (unstable-pkgs) prismlauncher;
+    };
+    inherit local-pkgs;
+  };
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
@@ -56,7 +75,8 @@
       ripgrep btop p7zip imagemagick lua
       playerctl pavucontrol helvum
       inotify-tools fastfetch
-      inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
+      unstable-pkgs.zed-editor
+      # hyprcursor-rose-pine
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
