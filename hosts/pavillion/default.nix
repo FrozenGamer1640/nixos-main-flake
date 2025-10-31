@@ -1,7 +1,7 @@
 { inputs, pkgs, ezModules, attrSetFromDir, localPkgsPath, ... }:
 let
   unstable-pkgs = import inputs.nixpkgs-unstable {
-    system = pkgs.stdenv.hostPlatform.system;
+    inherit (pkgs) system;
     config.allowUnfree = true;
   };
   local-pkgs = attrSetFromDir {
@@ -76,7 +76,7 @@ in
       playerctl pavucontrol helvum
       inotify-tools fastfetch
       unstable-pkgs.zed-editor
-      # hyprcursor-rose-pine
+      inputs.hyprcursor-rose-pine.pkgs.${pkgs.system}.default
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
@@ -89,7 +89,7 @@ in
 
   networking = {
     networkmanager.enable = true;
-    hostName = "Fuyuka-s-Pavillion-Laptop";
+    hostName = "Pavillion-Laptop";
     firewall.enable = true;
   };
 
