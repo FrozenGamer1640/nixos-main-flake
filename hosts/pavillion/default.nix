@@ -39,18 +39,6 @@ in
     playerctld.enable = true;
     hypridle.enable = true;
     gnome.gnome-keyring.enable = true;
-
-    displayManager = {
-      cosmic-greeter.enable = true;
-    };
-
-    desktopManager = {
-      cosmic = {
-        enable = true;
-        xwayland.enable = true;
-      };
-
-    };
   };
 
   xdg.portal = {
@@ -67,6 +55,7 @@ in
   programs = {
     dconf.enable = true;
     xwayland.enable = true;
+    hyprland.enable = true;
   };
 
   environment = {
@@ -76,7 +65,7 @@ in
       playerctl pavucontrol helvum
       inotify-tools fastfetch
       unstable-pkgs.zed-editor
-      inputs.hyprcursor-rose-pine.pkgs.${pkgs.system}.default
+      inputs.hyprcursor-rose-pine.packages.${pkgs.system}.default
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
