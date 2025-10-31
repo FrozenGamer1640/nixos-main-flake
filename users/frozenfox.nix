@@ -1,4 +1,4 @@
-{ ezModules, pkgs, osConfig, ... }:
+{ ezModules, pkgs, osConfig, inputs, ... }:
 let
   unstable-pkgs = osConfig.fuyuExtras.unstable-pkgs;
 in
@@ -19,6 +19,8 @@ in
     username = "frozenfox";
     homeDirectory = "/home/frozenfox";
   };
+
+  wayland.windowManager.hyprland.package = inputs.hyprland.packages.${pkgs.system}.default;
 
   programs = {
     cava.enable = true;

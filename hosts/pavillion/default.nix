@@ -55,7 +55,10 @@ in
   programs = {
     dconf.enable = true;
     xwayland.enable = true;
-    hyprland.enable = true;
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.default;
+    };
   };
 
   environment = {
