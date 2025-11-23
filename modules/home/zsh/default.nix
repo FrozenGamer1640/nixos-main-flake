@@ -25,7 +25,7 @@
         "\n╰─ $username"
         "$cmd_duration"
         "$character"
-        "](fg:base01)"
+        "](fg:base03)"
       ];
 
       username = {

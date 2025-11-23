@@ -23,6 +23,7 @@
   programs = {
     cava.enable = true;
     jq.enable = true;
+    kitty.enable = true;
   };
 
   home.packages = with pkgs; [
