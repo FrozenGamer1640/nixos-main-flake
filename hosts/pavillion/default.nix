@@ -35,6 +35,7 @@
   programs = {
     dconf.enable = true;
     xwayland.enable = true;
+    zsh.enable = true;
     hyprland = {
       enable = true;
       package = inputs'.hyprland.packages.default;
@@ -58,6 +59,8 @@
       EDITOR = "zeditor";
     };
   };
+
+  users.defaultUserShell = pkgs.zsh;
 
   networking = {
     networkmanager.enable = true;
