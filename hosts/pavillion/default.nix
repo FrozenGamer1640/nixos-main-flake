@@ -45,7 +45,7 @@
   environment = {
     systemPackages = with pkgs; [
       acpi tlp home-manager nixd libnotify nil killall
-      ripgrep btop p7zip imagemagick lua
+      ripgrep btop p7zip imagemagick lua starship
       playerctl pavucontrol helvum
       inotify-tools fastfetch
       unstable-pkgs.zed-editor

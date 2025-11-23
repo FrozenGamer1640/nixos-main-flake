@@ -35,5 +35,6 @@
     gtk.enable = true;
     qt.enable = true;
     kitty.enable = true;
+    starship.enable = true;
   };
 }
