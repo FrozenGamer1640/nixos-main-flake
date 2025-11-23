@@ -1,8 +1,4 @@
-{ osConfig, ... }:
-let
-  unstable-pkgs = osConfig.fuyuExtras.unstable-pkgs;
-  local-pkgs = osConfig.fuyuExtras.local-pkgs;
-in
+{ local-pkgs, unstable-pkgs, ... }:
 {
   home.packages = [
     local-pkgs.discord-presence-lsp

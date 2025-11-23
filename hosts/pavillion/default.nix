@@ -1,4 +1,4 @@
-{ inputs, inputs', pkgs, local-pkgs, unstable-pkgs, ... }:
+{ inputs', pkgs, unstable-pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix

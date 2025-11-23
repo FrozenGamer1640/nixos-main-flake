@@ -94,7 +94,7 @@
                 unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs) system; allowUnfree = true;};
               };
 
-              modules = with fuyuHomeModules; [
+              modules = [
                 ./modules/home
                 ./users/frozenfox.nix
               #   inputs.stylix.homeModules.stylix
