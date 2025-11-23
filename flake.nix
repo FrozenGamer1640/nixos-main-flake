@@ -46,6 +46,7 @@
         vesktop = ./modules/home/vesktop;
         xdg = ./modules/home/xdg;
         zed-editor = ./modules/home/zed-editor;
+        fuyu-games = ./modules/home/fuyu-games;
       };
       fuyuNixosModules = {
         pipewire = ./modules/nixos/pipewire.nix;

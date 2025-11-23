@@ -1,4 +1,4 @@
-{ pkgs, unstable-pkgs, fuyuHomeModules, fuyuGenericModules, inputs, ... }:
+{ pkgs, fuyuHomeModules, fuyuGenericModules, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
 
@@ -9,6 +9,7 @@
     obs-studio
     vesktop
     zed-editor
+    fuyu-games
   ];
 
   home = {
@@ -29,4 +30,10 @@
     anki-bin
     wl-clicker
   ];
+
+  stylix.targets = {
+    gtk.enable = true;
+    qt.enable = true;
+    kitty.enable = true;
+  };
 }
