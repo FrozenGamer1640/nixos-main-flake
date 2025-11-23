@@ -26,8 +26,6 @@
 
   home.packages = with pkgs; [
     google-chrome youtube-music
-    unstable-pkgs.osu-lazer-bin
-    unstable-pkgs.prismlauncher
     anki-bin
     wl-clicker
   ];
