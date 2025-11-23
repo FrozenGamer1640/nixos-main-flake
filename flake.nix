@@ -36,14 +36,17 @@
   (
     { withSystem, ... }:
     let
-      fuyuHomeModules = (with builtins;
-        inputs.nixpkgs.lib.genAttrs
-          (filter
-            (name: typeOf (readDir ./modules/home/${name}) == "set")
-            (attrNames (readDir ./modules/home))
-          )
-          (name: ./modules/home/${name})
-      );
+      fuyuHomeModules = {
+        dunst = ./modules/home/dunst;
+        eww = ./modules/home/eww;
+        git = ./modules/home/git;
+        gpg = ./modules/home/gpg;
+        hyprland = ./modules/home/hyprland;
+        obs-studio = ./modules/home/obs-studio;
+        vesktop = ./modules/home/vesktop;
+        xdg = ./modules/home/xdg;
+        zed-editor = ./modules/home/zed-editor;
+      };
       fuyuNixosModules = {
         pipewire = ./modules/nixos/pipewire.nix;
         fonts = ./modules/nixos/fonts.nix;
@@ -60,6 +63,12 @@
       imports = [
         inputs.home-manager.flakeModules.home-manager
       ];
+
+      perSystem = { pkgs, ... }: {
+        packages = {
+          discord-presence-lsp = import ./modules/packages/discord-presence-lsp.nix { inherit pkgs; };
+        };
+      };
 
       flake = {
         nixosConfigurations.pavillion = withSystem "x86_64-linux" (
@@ -97,14 +106,6 @@
               modules = [
                 ./modules/home
                 ./users/frozenfox.nix
-              #   inputs.stylix.homeModules.stylix
-              #   fuyuGenericModules.stylix
-              #   dunst git gpg xdg
-              #   eww
-              #   hyprland
-              #   obs-studio
-              #   vesktop
-              #   zed-editor
               ];
             }
           );

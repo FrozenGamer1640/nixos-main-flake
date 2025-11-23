@@ -1,6 +1,15 @@
-{ pkgs, unstable-pkgs, inputs, ... }:
+{ pkgs, unstable-pkgs, fuyuHomeModules, fuyuGenericModules, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
+
+  imports = with fuyuHomeModules; [
+    fuyuGenericModules.stylix
+    git xdg gpg dunst
+    eww hyprland
+    obs-studio
+    vesktop
+    zed-editor
+  ];
 
   home = {
     stateVersion = "25.05";
@@ -16,7 +25,6 @@
   };
 
   home.packages = with pkgs; [
-    inkscape libresprite pixelorama
     google-chrome youtube-music
     unstable-pkgs.osu-lazer-bin
     unstable-pkgs.prismlauncher
