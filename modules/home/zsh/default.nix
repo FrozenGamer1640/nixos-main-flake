@@ -19,36 +19,27 @@
       "$schema" = "https://starship.rs/config-schema.json";
 
       format = lib.concatStrings [
-        "$os"
-        "$username"
-        "$directory"
-        "$git_branch"
-        "$git_status"
+        "[╭─ $directory"
+        "$git_branch$git_status"
         "$rust"
-        "$time"
+        "\n╰─ $username"
         "$cmd_duration"
-        "$line_break"
         "$character"
+        "](fg:base01)"
       ];
-
-      os = {
-        disabled = false;
-        style = "bg:red fg:black";
-        format = "[](red)$os";
-      };
 
       username = {
         show_always = true;
-        style_user = "bg:red fg:black";
-        style_root = "bg:red fg:black";
-        format = "[$user]($style)";
+        style_user = "fg:purple";
+        style_root = "fg:red";
+        format = "[󱄅](fg:cyan) [$user]($style)";
       };
 
       directory = {
-        style = "bg:bright-red fg:black";
+        style = "fg:purple";
         truncation_length = 3;
         truncation_symbol = ".../";
-        format = "[](fg:red bg:bright-red)[$path]($style)";
+        format = "[$path]($style)";
 
         substitutions = {
           "Documents" = "󰈙";
@@ -60,45 +51,35 @@
 
       git_branch = {
         symbol = "";
-        style = "bg:yellow";
-        format = "[](fg:bright-red bg:yellow)[$symbol $branch](fg:black bg:yellow)";
+        format = " ─ [$symbol $branch](fg:blue)";
       };
 
       git_status = {
-        style = "bg:yellow";
-        format = "[[($all_status $ahead_behind)](fg:black bg:yellow)]($style)";
-      };
-
-      time = {
-        disabled = false;
-        style = "bg:bright-magenta";
-        use_12hr = true;
-        format = "[](fg:yellow bg:bright-magenta)[ $time ](fg:black bg:bright-magenta)";
+        format = " ─ [(「$all_status $ahead_behind」)](fg:cyan)";
       };
 
       rust = {
         symbol = "";
-        style = "bg:base03";
-        format = "[](fg:bright-magenta bg:base03)[$symbol($version)](fg:black bg:base03)";
+        format = " ─ [$symbol ($version)](fg:orange)";
       };
 
       cmd_duration = {
         disabled = false;
-        format = "[](fg:bright-magenta bg:none)[  in $duration ](fg:bright-magenta)";
+        format = "[  in $duration ](fg:base02)";
         show_milliseconds = true;
         show_notifications = true;
-        min_time_to_notify = 45000;
+        min_time_to_notify = 15000;
       };
 
       line_break.disabled = true;
       character = {
         disabled = false;
-        success_symbol = "[❯](bold fg:blue)";
-        error_symbol = "[❯](bold fg:red)";
-        vimcmd_symbol = "[❮](bold fg:blue)";
-        vimcmd_replace_one_symbol = "[❮](bold fg:bright-magenta)";
-        vimcmd_replace_symbol = "[❮](bold fg:bright-magenta)";
-        vimcmd_visual_symbol = "[❮](bold fg:yellow)";
+        success_symbol = "[ ](bold fg:blue)";
+        error_symbol = "[ ](bold fg:red)";
+        vimcmd_symbol = "[ ](bold fg:blue)";
+        vimcmd_replace_one_symbol = "[ ](bold fg:purple)";
+        vimcmd_replace_symbol = "[ ](bold fg:purple)";
+        vimcmd_visual_symbol = "[ ](bold fg:orange)";
       };
 
     };
