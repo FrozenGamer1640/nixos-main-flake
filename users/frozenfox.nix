@@ -4,7 +4,7 @@
 
   imports = with fuyuHomeModules; [
     fuyuGenericModules.stylix
-    git xdg gpg dunst
+    git xdg gpg dunst zsh
     eww hyprland
     obs-studio
     vesktop
