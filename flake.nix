@@ -6,13 +6,6 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
-    ez-configs = {
-      url = "github:ehllie/ez-configs";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
-    };
     stylix = {
       url = "github:nix-community/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,42 +33,83 @@
 
   outputs = inputs @ { flake-parts, ... }:
   flake-parts.lib.mkFlake { inherit inputs; }
-  ({ ... }:
-  let
-    attrSetFromDir = import ./modules/flake/attrSetFromDir.nix { inherit (inputs.nixpkgs) lib; };
-    xtraArgs = {
-      inherit inputs;
-      inherit attrSetFromDir;
-      stylixModule = ./modules/stylix;
-      localPkgsPath = ./modules/packages;
-    };
-  in
-  {
-    debug = true;
-    systems = [ "x86_64-linux" ];
+  (
+    { withSystem, ... }:
+    let
+      fuyuHomeModules = (with builtins;
+        inputs.nixpkgs.lib.genAttrs
+          (filter
+            (name: typeOf (readDir ./modules/home/${name}) == "set")
+            (attrNames (readDir ./modules/home))
+          )
+          (name: ./modules/home/${name})
+      );
+      fuyuNixosModules = {
+        pipewire = ./modules/nixos/pipewire.nix;
+        fonts = ./modules/nixos/fonts.nix;
+        locale-es-cr = ./modules/nixos/locale-es-cr.nix;
+      };
+      fuyuGenericModules= {
+        stylix = ./modules/stylix;
+      };
+    in
+    {
+      debug = true;
+      systems = [ "x86_64-linux" ];
 
-    imports = [
-      inputs.ez-configs.flakeModule
-    ];
+      imports = [
+        inputs.home-manager.flakeModules.home-manager
+      ];
 
-    ezConfigs = {
-      root = ./.;
-      earlyModuleArgs = xtraArgs;
-      globalArgs = xtraArgs;
+      flake = {
+        nixosConfigurations.pavillion = withSystem "x86_64-linux" (
+          { config, inputs', pkgs, ... }:
+          inputs.nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              inherit inputs inputs';
+              inherit fuyuGenericModules fuyuNixosModules;
+              local-pkgs = config.packages;
+              unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs) system; allowUnfree = true;};
+            };
 
-      nixos = {
-        configurationsDirectory = ./hosts;
-        modulesDirectory = ./modules/nixos;
+            modules = with fuyuNixosModules; [
+              ./modules/nixos
+              ./hosts/pavillion
+              fuyuGenericModules.stylix
+              fonts locale-es-cr
+              pipewire
+            ];
+          }
+        );
 
-        hosts = {
-          pavillion.userHomeModules = [ "frozenfox" ];
+        homeConfigurations = {
+          "frozenfox" = withSystem "x86_64-linux" (
+            { config, inputs', pkgs, ... }:
+            inputs.home-manager.lib.homeManagerConfiguration {
+              inherit pkgs;
+              extraSpecialArgs = {
+                inherit inputs inputs';
+                inherit fuyuGenericModules fuyuHomeModules;
+                local-pkgs = config.packages;
+                unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs) system; allowUnfree = true;};
+              };
+
+              modules = with fuyuHomeModules; [
+                ./modules/home
+                ./users/frozenfox.nix
+              #   inputs.stylix.homeModules.stylix
+              #   fuyuGenericModules.stylix
+              #   dunst git gpg xdg
+              #   eww
+              #   hyprland
+              #   obs-studio
+              #   vesktop
+              #   zed-editor
+              ];
+            }
+          );
         };
       };
-
-      home = {
-        configurationsDirectory = ./users;
-        modulesDirectory = ./modules/home;
-      };
-    };
-  });
+    }
+  );
 }

@@ -1,28 +1,8 @@
-{ inputs, pkgs, ezModules, attrSetFromDir, localPkgsPath, ... }:
-let
-  unstable-pkgs = import inputs.nixpkgs-unstable {
-    inherit (pkgs) system;
-    config.allowUnfree = true;
-  };
-  local-pkgs = attrSetFromDir {
-    directory = localPkgsPath;
-    inherit pkgs;
-  };
-in
+{ inputs, inputs', pkgs, local-pkgs, unstable-pkgs, ... }:
 {
-  imports = with ezModules; [
+  imports = [
     ./hardware-configuration.nix
-    pipewire locale-es-cr fonts
   ];
-
-  fuyuExtras = {
-    unstable-pkgs = {
-      inherit (unstable-pkgs) osu-lazer-bin;
-      inherit (unstable-pkgs) zed-editor;
-      inherit (unstable-pkgs) prismlauncher;
-    };
-    inherit local-pkgs;
-  };
 
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.05";
@@ -57,7 +37,7 @@ in
     xwayland.enable = true;
     hyprland = {
       enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.default;
+      package = inputs'.hyprland.packages.default;
     };
   };
 
@@ -68,7 +48,7 @@ in
       playerctl pavucontrol helvum
       inotify-tools fastfetch
       unstable-pkgs.zed-editor
-      inputs.hyprcursor-rose-pine.packages.${pkgs.system}.default
+      inputs'.hyprcursor-rose-pine.packages.default
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";

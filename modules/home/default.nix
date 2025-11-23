@@ -1,7 +1,6 @@
-{ inputs, stylixModule, ... }:
+{ inputs, ... }:
 {
   imports = [
     inputs.stylix.homeModules.stylix
-    stylixModule
   ];
 }

@@ -1,17 +1,10 @@
-{ lib, ... }:
+{ inputs, ... }:
 {
-  options.fuyuExtras = {
-    unstable-pkgs = lib.mkOption {
-      type = lib.types.attrsOf lib.types.anything;
-      default = {};
-    };
-    local-pkgs = lib.mkOption {
-      type = lib.types.attrsOf lib.types.anything;
-      default = {};
-    };
-  };
-
   config = {
+    imports = [
+      inputs.stylix.nixosModules.stylix
+    ];
+
     boot = {
       loader = {
         systemd-boot.enable = true;

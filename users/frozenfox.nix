@@ -1,17 +1,5 @@
-{ ezModules, pkgs, osConfig, inputs, ... }:
-let
-  unstable-pkgs = osConfig.fuyuExtras.unstable-pkgs;
-in
+{ pkgs, unstable-pkgs, inputs, ... }:
 {
-  imports = with ezModules; [
-    xdg gpg
-    dunst
-    git
-    hyprland eww
-    vesktop
-    zed-editor
-  ];
-
   nixpkgs.config.allowUnfree = true;
 
   home = {
