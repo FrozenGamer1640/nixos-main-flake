@@ -57,6 +57,7 @@
       fuyuGenericModules= {
         stylix = ./modules/stylix;
       };
+      assets = ./assets;
     in
     {
       debug = true;
@@ -77,7 +78,7 @@
           { config, inputs', pkgs, ... }:
           inputs.nixpkgs.lib.nixosSystem {
             specialArgs = {
-              inherit inputs inputs';
+              inherit inputs inputs' assets;
               inherit fuyuGenericModules fuyuNixosModules;
               local-pkgs = config.packages;
               unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs) system; allowUnfree = true;};
@@ -99,7 +100,7 @@
             inputs.home-manager.lib.homeManagerConfiguration {
               inherit pkgs;
               extraSpecialArgs = {
-                inherit inputs inputs';
+                inherit inputs inputs' assets;
                 inherit fuyuGenericModules fuyuHomeModules;
                 local-pkgs = config.packages;
                 unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs) system; allowUnfree = true;};
