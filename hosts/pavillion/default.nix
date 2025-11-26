@@ -22,6 +22,9 @@
     playerctld.enable = true;
     hypridle.enable = true;
     gnome.gnome-keyring.enable = true;
+    displayManager.ly = {
+      enable = true;
+    };
   };
 
   xdg.portal = {
