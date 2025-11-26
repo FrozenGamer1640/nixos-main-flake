@@ -1,6 +1,10 @@
 { pkgs, lib, assets, config, ... }:
 let
   customWallpaperPath = assets + /customWallpaper.webp;
+  hackNerdFont = {
+    package = pkgs.nerd-fonts.hack;
+    name = "HackNerdFont";
+  };
 in
 {
   stylix = {
@@ -9,5 +13,14 @@ in
     polarity = "dark";
     autoEnable = false;
     image = if (lib.pathExists customWallpaperPath) then customWallpaperPath else (config.lib.stylix.pixel "base01");
+    fonts = {
+      serif = hackNerdFont;
+      sansSerif = hackNerdFont;
+      monospace = hackNerdFont;
+      emoji = {
+        package = pkgs.noto-fonts-color-emoji;
+        name = "NotoFontsColorEmoji";
+      };
+    };
   };
 }
