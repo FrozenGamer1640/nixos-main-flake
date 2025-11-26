@@ -27,9 +27,15 @@
     cava.enable = true;
     jq.enable = true;
     kitty.enable = true;
-    thunderbird.enable = true;
     vim.enable = true;
-    anki.enable = true;
+    mpv.enable = true;
+  };
+
+  programs.thunderbird = {
+    enable = true;
+    profiles.Fuyuka = {
+      isDefault = true;
+    };
   };
 
   home.packages = with pkgs; [
@@ -43,7 +49,6 @@
     qt.enable = true;
     kitty.enable = true;
     starship.enable = true;
-    anki.enable = true;
     wofi.enable = true;
     vim.enable = true;
     btop.enable = true;
