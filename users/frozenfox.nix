@@ -6,6 +6,7 @@
     fuyuGenericModules.stylix
     git xdg gpg dunst zsh
     eww hyprland
+    kitty
     obs-studio
     vesktop
     zed-editor

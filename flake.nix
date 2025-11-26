@@ -42,6 +42,7 @@
         git = ./modules/home/git;
         gpg = ./modules/home/gpg;
         zsh = ./modules/home/zsh;
+        kitty = ./modules/home/kitty;
         hyprland = ./modules/home/hyprland;
         obs-studio = ./modules/home/obs-studio;
         vesktop = ./modules/home/vesktop;
