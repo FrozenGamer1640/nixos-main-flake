@@ -17,9 +17,6 @@
     stateVersion = "25.05";
     username = "frozenfox";
     homeDirectory = "/home/frozenfox";
-    sessionVariables = {
-      NIXPKGS_ALLOW_UNFREE=1;
-    };
   };
 
   wayland.windowManager.hyprland.package = inputs.hyprland.packages.${pkgs.system}.default;
@@ -30,6 +27,7 @@
     kitty.enable = true;
     vim.enable = true;
     mpv.enable = true;
+    zsh.sessionVariables = { NIXPKGS_ALLOW_UNFREE = "1"; };
   };
 
   programs.thunderbird = {
