@@ -52,5 +52,6 @@
     wofi.enable = true;
     vim.enable = true;
     btop.enable = true;
+    mpv.enable = true;
   };
 }
