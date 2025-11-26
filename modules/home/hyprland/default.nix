@@ -7,6 +7,7 @@ in
     hyprland.enable = true;
     hyprpaper.enable = true;
     hyprlock.enable = true;
+    yazi.enable = true;
   };
 
   services = {
@@ -19,6 +20,7 @@ in
   programs = {
     hyprlock.enable = true;
     kitty.enable = true;
+    yazi.enable = true;
   };
 
   wayland.windowManager.hyprland = {
