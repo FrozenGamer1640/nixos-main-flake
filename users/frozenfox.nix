@@ -16,6 +16,9 @@
     stateVersion = "25.05";
     username = "frozenfox";
     homeDirectory = "/home/frozenfox";
+    sessionVariables = {
+      NIXPKGS_ALLOW_UNFREE=1;
+    };
   };
 
   wayland.windowManager.hyprland.package = inputs.hyprland.packages.${pkgs.system}.default;
@@ -24,6 +27,9 @@
     cava.enable = true;
     jq.enable = true;
     kitty.enable = true;
+    thunderbird.enable = true;
+    vim.enable = true;
+    anki.enable = true;
   };
 
   home.packages = with pkgs; [
@@ -37,5 +43,9 @@
     qt.enable = true;
     kitty.enable = true;
     starship.enable = true;
+    anki.enable = true;
+    wofi.enable = true;
+    vim.enable = true;
+    btop.enable = true;
   };
 }
