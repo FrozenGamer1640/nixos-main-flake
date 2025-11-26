@@ -1,7 +1,8 @@
-{ inputs, ... }:
+{ inputs, fuyuGenericModules, ... }:
 {
   imports = [
     inputs.stylix.nixosModules.stylix
+    fuyuGenericModules.stylix
   ];
 
   boot = {

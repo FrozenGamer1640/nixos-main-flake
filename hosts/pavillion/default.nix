@@ -1,7 +1,10 @@
-{ inputs', pkgs, unstable-pkgs, ... }:
+{ inputs', pkgs, unstable-pkgs, fuyuNixosModules, ... }:
 {
-  imports = [
+  imports = with fuyuNixosModules; [
     ./hardware-configuration.nix
+    fonts locale-es-cr
+    pipewire
+    steam
   ];
 
   nixpkgs.config.allowUnfree = true;

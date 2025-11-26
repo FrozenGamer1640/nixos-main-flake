@@ -53,6 +53,7 @@
         pipewire = ./modules/nixos/pipewire.nix;
         fonts = ./modules/nixos/fonts.nix;
         locale-es-cr = ./modules/nixos/locale-es-cr.nix;
+        steam = ./modules/nixos/steam.nix;
       };
       fuyuGenericModules= {
         stylix = ./modules/stylix;
@@ -84,12 +85,9 @@
               unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs) system; allowUnfree = true;};
             };
 
-            modules = with fuyuNixosModules; [
+            modules = [
               ./modules/nixos
               ./hosts/pavillion
-              fuyuGenericModules.stylix
-              fonts locale-es-cr
-              pipewire
             ];
           }
         );
