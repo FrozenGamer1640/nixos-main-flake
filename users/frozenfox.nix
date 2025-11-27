@@ -38,9 +38,10 @@
   };
 
   home.packages = with pkgs; [
-    google-chrome youtube-music
+    youtube-music
     anki-bin
     wl-clicker
+    vieb
   ];
 
   stylix.targets = {
