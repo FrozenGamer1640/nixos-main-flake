@@ -29,6 +29,11 @@
       url = "github:rishabh5321/seanime-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    vieb-nix = {
+      url = "github:tejing1/vieb-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { flake-parts, ... }:
@@ -55,6 +60,9 @@
         fonts = ./modules/nixos/fonts.nix;
         locale-es-cr = ./modules/nixos/locale-es-cr.nix;
         steam = ./modules/nixos/steam.nix;
+        vieb-nix = { pkgs, ... }: {
+          environment.systemPackages = [ (inputs.vieb-nix.packagesFunc pkgs).vieb ];
+        };
       };
       fuyuGenericModules= {
         stylix = ./modules/stylix;

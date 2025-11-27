@@ -5,6 +5,7 @@
     fonts locale-es-cr
     pipewire
     steam
+    vieb-nix
   ];
 
   nixpkgs.config.allowUnfree = true;

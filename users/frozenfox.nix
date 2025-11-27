@@ -41,7 +41,6 @@
     youtube-music
     anki-bin
     wl-clicker
-    vieb
   ];
 
   stylix.targets = {
