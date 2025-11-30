@@ -2,6 +2,7 @@
 {
   imports = with fuyuNixosModules; [
     ./hardware-configuration.nix
+    ./nextcloud.nix
     fonts locale-es-cr
     pipewire
     steam
