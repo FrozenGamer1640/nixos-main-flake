@@ -83,8 +83,8 @@
   };
 
   fileSystems."/mnt/Xtra" = {
-    device = "/dev/disk/by-uuid/86384BEC384BD9B7";
-    fsType = "ntfs";
+    device = "/dev/disk/by-uuid/b43e0502-b5ed-4498-b491-c66fa78bddfe";
+    fsType = "btrfs";
     options = ["nofail"];
   };
 }
