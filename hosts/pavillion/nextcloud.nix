@@ -16,6 +16,19 @@
     extraApps = {
       inherit (config.services.nextcloud.package.packages.apps) contacts calendar tasks;
     };
+    settings =
+      let
+        prot = "http"; # or https
+        host = config.services.nextcloud.hostName;
+        dir = "/nextcloud";
+      in
+      {
+        overwriteprotocol = prot;
+        overwritehost = host;
+        overwritewebroot = dir;
+        overwrite.cli.url = "${prot}://${host}${dir}/";
+        htaccess.RewriteBase = dir;
+      };
   };
 
   services.netbird = {
