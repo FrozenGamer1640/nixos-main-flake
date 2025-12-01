@@ -1,9 +1,16 @@
-{ inputs', pkgs, unstable-pkgs, fuyuNixosModules, ... }:
+{
+  inputs',
+  pkgs,
+  unstable-pkgs,
+  fuyuNixosModules,
+  ...
+}:
 {
   imports = with fuyuNixosModules; [
     ./hardware-configuration.nix
-    ./nextcloud.nix
-    fonts locale-es-cr
+    # ./nextcloud.nix
+    fonts
+    locale-es-cr
     pipewire
     steam
     vieb-nix
@@ -15,7 +22,11 @@
   nix.settings.allowed-users = [ "frozenfox" ];
   users.users.frozenfox = {
     isNormalUser = true;
-    extraGroups = [ "input" "wheel" "networkmanager" ];
+    extraGroups = [
+      "input"
+      "wheel"
+      "networkmanager"
+    ];
   };
 
   services = {
@@ -52,10 +63,24 @@
 
   environment = {
     systemPackages = with pkgs; [
-      acpi tlp home-manager nixd libnotify nil killall
-      ripgrep btop p7zip imagemagick lua starship
-      playerctl pavucontrol helvum
-      inotify-tools fastfetch
+      acpi
+      tlp
+      home-manager
+      nixd
+      libnotify
+      nil
+      killall
+      ripgrep
+      btop
+      p7zip
+      imagemagick
+      lua
+      starship
+      playerctl
+      pavucontrol
+      helvum
+      inotify-tools
+      fastfetch
       unstable-pkgs.zed-editor
       inputs'.hyprcursor-rose-pine.packages.default
     ];
@@ -86,6 +111,6 @@
   fileSystems."/mnt/Xtra" = {
     device = "/dev/disk/by-uuid/b43e0502-b5ed-4498-b491-c66fa78bddfe";
     fsType = "btrfs";
-    options = ["nofail"];
+    options = [ "nofail" ];
   };
 }
