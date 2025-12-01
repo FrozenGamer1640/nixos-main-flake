@@ -41,6 +41,8 @@
     youtube-music
     anki-bin
     wl-clicker
+    lutris
+    winetricks
   ];
 
   stylix.targets = {
