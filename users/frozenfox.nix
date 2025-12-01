@@ -14,12 +14,12 @@
   ];
 
   home = {
-    stateVersion = "25.05";
+    stateVersion = "25.11";
     username = "frozenfox";
     homeDirectory = "/home/frozenfox";
   };
 
-  wayland.windowManager.hyprland.package = inputs.hyprland.packages.${pkgs.system}.default;
+  wayland.windowManager.hyprland.package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
   programs = {
     cava.enable = true;

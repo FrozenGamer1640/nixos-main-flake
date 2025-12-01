@@ -2,9 +2,9 @@
 {
   programs.git = {
     enable = true;
-    userName = "FrozenGamer1640";
-    userEmail = "gamercfp@gmail.com";
-    extraConfig = {
+    settings = {
+      user.name = "Fuyuka.nix";
+      user.email = "fuyuka.nix@proton.me";
       init = {
         defaultBranch = "main";
       };
