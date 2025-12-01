@@ -2,12 +2,13 @@
 {
   services.nextcloud = {
     enable = true;
+    configureRedis = true;
     package = pkgs.nextcloud32;
-    hostName = "localhost";
+    hostName = "pavillion-laptop.netbird.cloud"; # This is only accessible from my netbird acc
     home = "/mnt/Xtra/@SQLite"; # Yes, I use btrfs lmao
-    https = true;
+    https = false;
     extraAppsEnable = true;
-    settings.overwriteprotocol = "https";
+    # settings.overwriteprotocol = "https";
     config = {
       adminpassFile = "/etc/nextcloud-admin-pass";
       dbtype = "sqlite";
