@@ -81,6 +81,7 @@
       helvum
       inotify-tools
       fastfetch
+      easyeffects
       unstable-pkgs.zed-editor
       inputs'.hyprcursor-rose-pine.packages.default
     ];
