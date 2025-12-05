@@ -3,15 +3,15 @@
   lib,
 }:
 
-pkgs.stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation rec {
   pname = "osu-resources";
-  version = "2025.1125.0";
+  version = "5d5020878bbdd9e54fbe89c6d2f833d17750e94c";
 
   src = pkgs.fetchFromGitHub {
     owner = "ppy";
     repo = "osu-resources";
-    rev = "5d5020878bbdd9e54fbe89c6d2f833d17750e94c";
-    sha256 = "sha256-1wryzbl6y329p05zias5pkkg9rrkg9pcjv4gd9kk1mm7zrwgh5vm=";
+    rev = version;
+    sha256 = "sha256-pMBrrE8ua5CAAHL1X+dIvDCln6Ut8ZzfUgkUrnxC+6I=";
   };
 
   dontStrip = true;
