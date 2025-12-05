@@ -22,6 +22,7 @@
     vesktop
     zed-editor
     fuyu-games
+    osu-resources
     inputs.seanime.nixosModules.seanime # WHY DOES THE FORMATTER WORK UNTIL NOW
   ];
 
@@ -45,6 +46,7 @@
     zsh.sessionVariables = {
       NIXPKGS_ALLOW_UNFREE = "1";
     };
+    osu-resources.enable = true; # Part of a local module
   };
 
   programs.thunderbird = {

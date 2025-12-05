@@ -36,91 +36,117 @@
     };
   };
 
-  outputs = inputs @ { flake-parts, ... }:
-  flake-parts.lib.mkFlake { inherit inputs; }
-  (
-    { withSystem, ... }:
-    let
-      fuyuHomeModules = {
-        dunst = ./modules/home/dunst;
-        eww = ./modules/home/eww;
-        git = ./modules/home/git;
-        gpg = ./modules/home/gpg;
-        zsh = ./modules/home/zsh;
-        kitty = ./modules/home/kitty;
-        hyprland = ./modules/home/hyprland;
-        obs-studio = ./modules/home/obs-studio;
-        vesktop = ./modules/home/vesktop;
-        xdg = ./modules/home/xdg;
-        zed-editor = ./modules/home/zed-editor;
-        fuyu-games = ./modules/home/fuyu-games;
-      };
-      fuyuNixosModules = {
-        pipewire = ./modules/nixos/pipewire.nix;
-        fonts = ./modules/nixos/fonts.nix;
-        locale-es-cr = ./modules/nixos/locale-es-cr.nix;
-        steam = ./modules/nixos/steam.nix;
-        vieb-nix = { pkgs, ... }: {
-          environment.systemPackages = [ (inputs.vieb-nix.packagesFunc pkgs).vieb ];
+  outputs =
+    inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      { withSystem, ... }:
+      let
+        fuyuHomeModules = {
+          dunst = ./modules/home/dunst;
+          eww = ./modules/home/eww;
+          git = ./modules/home/git;
+          gpg = ./modules/home/gpg;
+          zsh = ./modules/home/zsh;
+          kitty = ./modules/home/kitty;
+          hyprland = ./modules/home/hyprland;
+          obs-studio = ./modules/home/obs-studio;
+          vesktop = ./modules/home/vesktop;
+          xdg = ./modules/home/xdg;
+          zed-editor = ./modules/home/zed-editor;
+          fuyu-games = ./modules/home/fuyu-games;
+          osu-resources = ./modules/home/osu-resources;
         };
-      };
-      fuyuGenericModules= {
-        stylix = ./modules/stylix;
-      };
-      assets = ./assets;
-    in
-    {
-      debug = true;
-      systems = [ "x86_64-linux" ];
-
-      imports = [
-        inputs.home-manager.flakeModules.home-manager
-      ];
-
-      perSystem = { pkgs, ... }: {
-        packages = {
-          discord-presence-lsp = import ./modules/packages/discord-presence-lsp.nix { inherit pkgs; };
-        };
-      };
-
-      flake = {
-        nixosConfigurations.pavillion = withSystem "x86_64-linux" (
-          { config, inputs', pkgs, ... }:
-          inputs.nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              inherit inputs inputs' assets;
-              inherit fuyuGenericModules fuyuNixosModules;
-              local-pkgs = config.packages;
-              unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs.stdenv.hostPlatform) system; allowUnfree = true;};
+        fuyuNixosModules = {
+          pipewire = ./modules/nixos/pipewire.nix;
+          fonts = ./modules/nixos/fonts.nix;
+          locale-es-cr = ./modules/nixos/locale-es-cr.nix;
+          steam = ./modules/nixos/steam.nix;
+          vieb-nix =
+            { pkgs, ... }:
+            {
+              environment.systemPackages = [ (inputs.vieb-nix.packagesFunc pkgs).vieb ];
             };
+        };
+        fuyuGenericModules = {
+          stylix = ./modules/stylix;
+        };
+        assets = ./assets;
+      in
+      {
+        debug = true;
+        systems = [ "x86_64-linux" ];
 
-            modules = [
-              ./modules/nixos
-              ./hosts/pavillion
-            ];
-          }
-        );
+        imports = [
+          inputs.home-manager.flakeModules.home-manager
+        ];
 
-        homeConfigurations = {
-          "frozenfox" = withSystem "x86_64-linux" (
-            { config, inputs', pkgs, ... }:
-            inputs.home-manager.lib.homeManagerConfiguration {
-              inherit pkgs;
-              extraSpecialArgs = {
+        perSystem =
+          {
+            pkgs,
+            lib,
+            ...
+          }:
+          {
+            packages = {
+              discord-presence-lsp = import ./modules/packages/discord-presence-lsp.nix { inherit pkgs; };
+              osu-resources = import ./modules/packages/osu-resources.nix { inherit pkgs lib; };
+            };
+          };
+
+        flake = {
+          nixosConfigurations.pavillion = withSystem "x86_64-linux" (
+            {
+              config,
+              inputs',
+              pkgs,
+              ...
+            }:
+            inputs.nixpkgs.lib.nixosSystem {
+              specialArgs = {
                 inherit inputs inputs' assets;
-                inherit fuyuGenericModules fuyuHomeModules;
+                inherit fuyuGenericModules fuyuNixosModules;
                 local-pkgs = config.packages;
-                unstable-pkgs = import inputs.nixpkgs-unstable { inherit (pkgs.stdenv.hostPlatform) system; allowUnfree = true;};
+                unstable-pkgs = import inputs.nixpkgs-unstable {
+                  inherit (pkgs.stdenv.hostPlatform) system;
+                  allowUnfree = true;
+                };
               };
 
               modules = [
-                ./modules/home
-                ./users/frozenfox.nix
+                ./modules/nixos
+                ./hosts/pavillion
               ];
             }
           );
+
+          homeConfigurations = {
+            "frozenfox" = withSystem "x86_64-linux" (
+              {
+                config,
+                inputs',
+                pkgs,
+                ...
+              }:
+              inputs.home-manager.lib.homeManagerConfiguration {
+                inherit pkgs;
+                extraSpecialArgs = {
+                  inherit inputs inputs' assets;
+                  inherit fuyuGenericModules fuyuHomeModules;
+                  local-pkgs = config.packages;
+                  unstable-pkgs = import inputs.nixpkgs-unstable {
+                    inherit (pkgs.stdenv.hostPlatform) system;
+                    allowUnfree = true;
+                  };
+                };
+
+                modules = [
+                  ./modules/home
+                  ./users/frozenfox.nix
+                ];
+              }
+            );
+          };
         };
-      };
-    }
-  );
+      }
+    );
 }
