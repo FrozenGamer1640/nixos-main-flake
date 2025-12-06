@@ -55,6 +55,10 @@
     dconf.enable = true;
     xwayland.enable = true;
     zsh.enable = true;
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
     hyprland = {
       enable = true;
       package = inputs'.hyprland.packages.default;
