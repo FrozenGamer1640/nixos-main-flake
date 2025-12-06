@@ -34,6 +34,11 @@
       url = "github:tejing1/vieb-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    copyparty = {
+      url = "github:9001/copyparty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -116,6 +121,10 @@
               modules = [
                 ./modules/nixos
                 ./hosts/pavillion
+                inputs.copyparty.nixosModules.default
+                {
+                  nixpkgs.overlays = [ inputs.copyparty.overlays.default ];
+                }
               ];
             }
           );

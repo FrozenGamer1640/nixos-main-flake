@@ -8,7 +8,8 @@
 {
   imports = with fuyuNixosModules; [
     ./hardware-configuration.nix
-    # ./nextcloud.nix
+    ./nextcloud.nix
+    ./copyparty.nix
     fonts
     locale-es-cr
     pipewire

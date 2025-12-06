@@ -101,6 +101,27 @@
         "type": "github"
       }
     },
+    "copyparty": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764892674,
+        "narHash": "sha256-6BhUTKjfh09j3HFPGKrTWbcswSErhhoCpZTM4nwrnmk=",
+        "owner": "9001",
+        "repo": "copyparty",
+        "rev": "c5c5f9b4b828b984cf7109d12f86150a334eb566",
+        "type": "github"
+      },
+      "original": {
+        "owner": "9001",
+        "repo": "copyparty",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -171,6 +192,21 @@
       "original": {
         "owner": "hercules-ci",
         "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1678901627,
+        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -621,6 +657,7 @@
     },
     "root": {
       "inputs": {
+        "copyparty": "copyparty",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "hyprcursor-rose-pine": "hyprcursor-rose-pine",
