@@ -53,6 +53,7 @@
           vesktop = ./modules/home/vesktop;
           xdg = ./modules/home/xdg;
           zed-editor = ./modules/home/zed-editor;
+          quickshell = ./modules/home/quickshell;
           fuyu-games = ./modules/home/fuyu-games;
           osu-resources = ./modules/home/osu-resources;
         };

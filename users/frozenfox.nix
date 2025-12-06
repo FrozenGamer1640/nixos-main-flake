@@ -21,6 +21,7 @@
     obs-studio
     vesktop
     zed-editor
+    quickshell
     fuyu-games
     osu-resources
     inputs.seanime.nixosModules.seanime # WHY DOES THE FORMATTER WORK UNTIL NOW
