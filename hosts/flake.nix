@@ -34,7 +34,7 @@
           modules =
             (importHost "pavillion")
             ++ (with modules.nixosModules; [
-              modules.generalModules.stylix
+              modules.stylixModules.default
               fonts
               locale-es-cr
               pipewire

@@ -40,7 +40,7 @@
           modules =
             (importUser "frozenfox")
             ++ (with modules.homeModules; [
-              modules.generalModules.stylix
+              modules.stylixModules.default
               git
               xdg
               gpg

@@ -13,8 +13,8 @@
       ...
     }:
     {
-      generalModules = {
-        stylix = ./stylix;
+      stylixModules = {
+        default = ./stylix;
       };
       nixosModules = {
         default = ./nixos;
