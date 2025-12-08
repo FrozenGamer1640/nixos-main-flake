@@ -31,6 +31,7 @@
       importUser = userName: [
         ./${userName}.nix
         modules.homeModules.default
+        modules.stylixModules.home
       ];
     in
     {
@@ -40,7 +41,7 @@
           modules =
             (importUser "frozenfox")
             ++ (with modules.homeModules; [
-              modules.stylixModules.default
+              modules.stylixModules.macchiato-cat
               git
               xdg
               gpg

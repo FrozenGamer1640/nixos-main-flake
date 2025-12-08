@@ -2,19 +2,30 @@
   description = "Modules containment sub-flake";
 
   inputs = {
+    packages = {
+      type = "path";
+      path = "../packages";
+    };
     stylix = {
-      url = "github:nix-community/stylix/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
+      type = "github";
+      owner = "nix-community";
+      repo = "stylix";
+      ref = "release-25.11";
+      inputs.nixpkgs.follows = "packages/nixpkgs";
     };
   };
 
   outputs =
     {
+      stylix,
       ...
     }:
     {
+      inherit stylix;
       stylixModules = {
-        default = ./stylix;
+        nixos = stylix.nixosModules.stylix;
+        home = stylix.homeModules.stylix;
+        macchiato-cat = ./stylix/macchiato-cat;
       };
       nixosModules = {
         default = ./nixos;

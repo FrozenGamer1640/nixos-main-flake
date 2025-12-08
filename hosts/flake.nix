@@ -24,6 +24,7 @@
         ./${hostName}
         ./${hostName}/hardware-configuration.nix
         modules.nixosModules.default
+        modules.stylixModules.nixos
       ];
     in
     {
@@ -34,7 +35,7 @@
           modules =
             (importHost "pavillion")
             ++ (with modules.nixosModules; [
-              modules.stylixModules.default
+              modules.stylixModules.macchiato-cat
               fonts
               locale-es-cr
               pipewire
