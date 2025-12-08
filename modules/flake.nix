@@ -13,11 +13,18 @@
       ref = "release-25.11";
       inputs.nixpkgs.follows = "packages/nixpkgs";
     };
+    seanime = {
+      type = "github";
+      owner = "rishabh5321";
+      repo = "seanime-flake";
+      inputs.nixpkgs.follows = "packages/nixpkgs";
+    };
   };
 
   outputs =
     {
       stylix,
+      seanime,
       ...
     }:
     {
@@ -35,6 +42,7 @@
         steam = ./nixos/steam.nix;
       };
       homeModules = {
+        inherit (seanime.nixosModules) seanime;
         dunst = ./home/dunst;
         eww = ./home/eww;
         git = ./home/git;

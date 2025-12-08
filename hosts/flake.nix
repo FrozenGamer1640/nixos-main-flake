@@ -32,6 +32,12 @@
         # This one is an HP Pavillion (Gaming) Laptop btw
         pavillion = packages.nixpkgs.lib.nixosSystem {
           pkgs = withSystem "x86_64-linux" packages.nixpkgs;
+          overlays = with packages.overlays; [
+            default
+            copyparty
+            hyprland-packages
+            rose-pine-hyprcursor
+          ];
           modules =
             (importHost "pavillion")
             ++ (with modules.nixosModules; [

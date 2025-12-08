@@ -2,6 +2,7 @@
   description = "Packages and overlays management sub-flake";
 
   inputs = {
+    systems.url = "github:nix-systems/default-linux";
     nixpkgs = {
       type = "github";
       owner = "nixos";
@@ -15,31 +16,37 @@
       ref = "nixos-unstable";
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland/nix";
+      type = "github";
+      owner = "hyprwm";
+      repo = "Hyprland";
+      ref = "nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    hyprcursor-rose-pine = {
-      url = "github:ndom91/rose-pine-hyprcursor";
+    rose-pine-cursor = {
+      type = "github";
+      owner = "ndom91";
+      repo = "rose-pine-hyprcursor";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
       inputs.hyprlang.follows = "hyprland/hyprlang";
     };
-    seanime = {
-      url = "github:rishabh5321/seanime-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    vieb-nix = {
-      url = "github:tejing1/vieb-nix";
+    vieb = {
+      type = "github";
+      owner = "tejing1";
+      repo = "vieb-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     copyparty = {
-      url = "github:9001/copyparty";
+      type = "github";
+      owner = "9001";
+      repo = "copyparty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    {
+    inputs@{
       self,
+      systems,
       nixpkgs,
       nixpkgs-unstable,
       ...
@@ -47,12 +54,10 @@
     {
       inherit nixpkgs nixpkgs-unstable;
 
+      eachSystem = nixpkgs.lib.genAttrs (import systems); # Directly extracted from the Hyprland's flake btw
+
       forAllSystems =
-        nixpkgs-input: function:
-        nixpkgs-input.lib.genAttrs [
-          # Add all the systems that your flake will support
-          "x86_64-linux"
-        ] (system: function nixpkgs-input.legacyPackages.${system});
+        nixpkgs-input: function: self.eachSystem (system: function nixpkgs-input.legacyPackages.${system});
 
       withSystem =
         system: nixpkgs:
@@ -61,9 +66,23 @@
           allowUnfree = true;
         });
 
-      packages = self.forAllSystems nixpkgs (pkgs: {
+      overlays = {
+        inherit (inputs.hyprland.overlays) hyprland-packages;
+        copyparty = inputs.copyparty.overlays.default;
+        rose-pine-hyprcursor = final: prev: {
+          rose-pine-cursor = inputs.rose-pine-cursor.packages.${prev.stdenv.hostPlatform.system}.default;
+        };
+        default = final: prev: self.packages.${prev.stdenv.hostPlatform.system};
+      };
+
+      packages = self.forAllSystems nixpkgs-unstable (pkgs: {
         osu-resources = pkgs.callPackage ./osu-resources.nix;
         discord-presence-lsp = pkgs.callPackage ./discord-presence-lsp.nix;
+        vieb = (inputs.vieb.packagesFunc pkgs).vieb;
       });
+
+      nixosModules = {
+        copyparty = inputs.copyparty.nixosModules.default;
+      };
     };
 }

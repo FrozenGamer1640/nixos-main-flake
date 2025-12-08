@@ -38,6 +38,12 @@
       homeConfigurations = {
         "frozenfox" = homeConfiguration {
           pkgs = packages.withSystem "x86_64-linux" packages.nixpkgs;
+          overlays = with packages.overlays; [
+            default
+            copyparty
+            hyprland-packages
+            rose-pine-hyprcursor
+          ];
           modules =
             (importUser "frozenfox")
             ++ (with modules.homeModules; [
@@ -50,13 +56,10 @@
               eww
               hyprland
               kitty
-              obs-studio
-              vesktop
               zed-editor
               quickshell
-              fuyu-games
               osu-resources
-              # inputs.seanime.nixosModules.seanime
+              seanime
             ]);
         };
       };
