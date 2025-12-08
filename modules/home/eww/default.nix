@@ -1,5 +1,7 @@
-{ pkgs, ... }:
-
+{
+  pkgs,
+  ...
+}:
 {
   programs = {
     eww.enable = true;

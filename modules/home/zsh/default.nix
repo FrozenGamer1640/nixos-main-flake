@@ -1,4 +1,7 @@
-{ lib, ... }:
+{
+  lib,
+  ...
+}:
 {
   programs.zsh = {
     enable = true;
@@ -65,7 +68,7 @@
 
       cmd_duration = {
         disabled = false;
-        format = "[  in $duration ](fg:base02)";
+        format = "[  in $duration](fg:base02)";
         show_milliseconds = true;
         show_notifications = true;
         min_time_to_notify = 15000;

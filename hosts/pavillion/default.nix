@@ -1,7 +1,6 @@
 {
-  inputs',
+  inputs,
   pkgs,
-  unstable-pkgs,
   ...
 }:
 {
@@ -55,7 +54,7 @@
     };
     hyprland = {
       enable = true;
-      package = inputs'.hyprland.packages.default;
+      # package = inputs.hyprland.${pkgs.stdenv.system}.packages.default;
     };
   };
 
@@ -80,8 +79,8 @@
       inotify-tools
       fastfetch
       easyeffects
-      unstable-pkgs.zed-editor
-      inputs'.hyprcursor-rose-pine.packages.default
+      zed-editor
+      # inputs'.hyprcursor-rose-pine.packages.default
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";

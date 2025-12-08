@@ -1,4 +1,6 @@
-{ ... }:
+{
+  ...
+}:
 {
   xdg.userDirs = {
     enable = true;

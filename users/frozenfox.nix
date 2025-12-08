@@ -1,6 +1,6 @@
 {
-  pkgs,
   inputs,
+  pkgs,
   ...
 }:
 {
@@ -9,7 +9,6 @@
   modules.home.services.seanime.enable = true;
 
   home = {
-    stateVersion = "25.11";
     username = "frozenfox";
     homeDirectory = "/home/frozenfox";
   };
@@ -42,6 +41,8 @@
     wl-clicker
     lutris
     winetricks
+    osu-osu-lazer-bin
+    prismlauncher
   ];
 
   stylix.targets = {

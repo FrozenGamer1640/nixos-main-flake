@@ -1,12 +1,9 @@
 {
   pkgs,
-  lib,
-  assets,
   config,
   ...
 }:
 let
-  customWallpaperPath = assets + /customWallpaper.webp;
   hackNerdFont = {
     package = pkgs.nerd-fonts.hack;
     name = "HackNerdFont";
@@ -18,11 +15,7 @@ in
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     polarity = "dark";
     autoEnable = false;
-    image =
-      if (lib.pathExists customWallpaperPath) then
-        customWallpaperPath
-      else
-        (config.lib.stylix.pixel "base01");
+    image = (config.lib.stylix.pixel "base01");
     fonts = {
       serif = hackNerdFont;
       sansSerif = hackNerdFont;

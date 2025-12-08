@@ -1,8 +1,11 @@
-{ local-pkgs, unstable-pkgs, ... }:
 {
-  home.packages = [
-    local-pkgs.discord-presence-lsp
-    unstable-pkgs.zed-editor
+  pkgs,
+  ...
+}:
+{
+  home.packages = with pkgs; [
+    discord-presence-lsp
+    zed-editor
   ];
 
   stylix.targets.zed.enable = true;

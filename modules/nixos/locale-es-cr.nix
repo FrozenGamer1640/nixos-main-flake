@@ -1,4 +1,6 @@
-{ ... }:
+{
+  ...
+}:
 {
   time.timeZone = "America/Costa_Rica";
   i18n = {
