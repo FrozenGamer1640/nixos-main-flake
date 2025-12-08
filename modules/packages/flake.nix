@@ -14,6 +14,27 @@
       repo = "nixpkgs";
       ref = "nixos-unstable";
     };
+    hyprland = {
+      url = "github:hyprwm/Hyprland/nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    hyprcursor-rose-pine = {
+      url = "github:ndom91/rose-pine-hyprcursor";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+    };
+    seanime = {
+      url = "github:rishabh5321/seanime-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    vieb-nix = {
+      url = "github:tejing1/vieb-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    copyparty = {
+      url = "github:9001/copyparty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
