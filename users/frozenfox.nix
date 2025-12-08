@@ -1,31 +1,10 @@
 {
   pkgs,
-  fuyuHomeModules,
-  fuyuGenericModules,
   inputs,
   ...
 }:
 {
-  nixpkgs.config.allowUnfree = true;
-
-  imports = with fuyuHomeModules; [
-    fuyuGenericModules.stylix
-    git
-    xdg
-    gpg
-    dunst
-    zsh
-    eww
-    hyprland
-    kitty
-    obs-studio
-    vesktop
-    zed-editor
-    quickshell
-    fuyu-games
-    osu-resources
-    inputs.seanime.nixosModules.seanime # WHY DOES THE FORMATTER WORK UNTIL NOW
-  ];
+  # nixpkgs.config.allowUnfree = true;
 
   modules.home.services.seanime.enable = true;
 
@@ -44,9 +23,9 @@
     kitty.enable = true;
     vim.enable = true;
     mpv.enable = true;
-    zsh.sessionVariables = {
-      NIXPKGS_ALLOW_UNFREE = "1";
-    };
+    # zsh.sessionVariables = {
+    #   NIXPKGS_ALLOW_UNFREE = "1";
+    # };
     osu-resources.enable = true; # Part of a local module
   };
 

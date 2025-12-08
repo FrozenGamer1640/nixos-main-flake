@@ -2,19 +2,12 @@
   inputs',
   pkgs,
   unstable-pkgs,
-  fuyuNixosModules,
   ...
 }:
 {
-  imports = with fuyuNixosModules; [
-    ./hardware-configuration.nix
+  imports = [
     ./nextcloud.nix
     ./copyparty.nix
-    fonts
-    locale-es-cr
-    pipewire
-    steam
-    vieb-nix
   ];
 
   nixpkgs.config.allowUnfree = true;
