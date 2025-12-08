@@ -11,7 +11,7 @@
     };
     packages = {
       type = "path";
-      path = "./../modules/packages";
+      path = "./../packages";
     };
     modules = {
       type = "path";
