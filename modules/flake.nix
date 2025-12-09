@@ -45,6 +45,7 @@
       };
       homeModules = {
         inherit (seanime.nixosModules) seanime;
+        default = ./home;
         dunst = ./home/dunst;
         eww = ./home/eww;
         git = ./home/git;

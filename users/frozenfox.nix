@@ -32,7 +32,7 @@
     wl-clicker
     lutris
     winetricks
-    osu-osu-lazer-bin
+    osu-lazer-bin
     prismlauncher
   ];
 
