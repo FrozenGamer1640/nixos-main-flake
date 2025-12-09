@@ -21,13 +21,6 @@
       ref = "nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    rose-pine-cursor = {
-      type = "github";
-      owner = "ndom91";
-      repo = "rose-pine-hyprcursor";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-      inputs.hyprlang.follows = "hyprland/hyprlang";
-    };
     vieb = {
       type = "github";
       owner = "tejing1";
@@ -80,9 +73,6 @@
           vieb = (inputs.vieb.packagesFunc final).vieb;
         };
       };
-
-      packages = self.forAllSystems nixpkgs-unstable (pkgs: {
-      });
 
       nixosModules = {
         copyparty = inputs.copyparty.nixosModules.default;
