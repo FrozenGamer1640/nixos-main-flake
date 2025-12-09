@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   xdg.userDirs = {
     enable = true;
     documents = "$HOME/stuff/Documents/";

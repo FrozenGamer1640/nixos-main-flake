@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   programs.gpg = {
     enable = true;
     publicKeys = [ ];

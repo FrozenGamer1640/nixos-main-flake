@@ -32,6 +32,7 @@
         ./${userName}.nix
         modules.homeModules.default
         modules.stylixModules.home
+        { home.username = "${userName}"; }
       ];
     in
     {
@@ -41,15 +42,7 @@
           modules =
             (importUser "frozenfox")
             ++ (with modules.homeModules; [
-              # Hey, this is a module btw
-              (packages.withOverlays (
-                with packages.overlays;
-                [
-                  default
-                  copyparty
-                  hyprland-packages
-                ]
-              ))
+              packages.withAllOverlays
               modules.stylixModules.macchiato-cat
               git
               xdg

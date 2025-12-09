@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   time.timeZone = "America/Costa_Rica";
   i18n = {
     defaultLocale = "es_MX.UTF-8";

@@ -68,14 +68,8 @@
           config.allowUnfree = true; # You migth wanna delete this, but I really hate defining predications everytime
         });
 
-      withOverlays =
-        overlays:
-        (
-          { ... }:
-          {
-            nixpkgs.overlays = overlays;
-          }
-        );
+      withOverlays = overlays: { nixpkgs.overlays = overlays; };
+      withAllOverlays = self.withOverlays (builtins.attrValues self.overlays);
 
       overlays = {
         inherit (inputs.hyprland.overlays) hyprland-packages;

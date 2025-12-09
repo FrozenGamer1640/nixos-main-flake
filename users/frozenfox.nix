@@ -1,20 +1,14 @@
 {
-  inputs,
   pkgs,
+  config,
   ...
 }:
 {
-  # nixpkgs.config.allowUnfree = true;
-
   modules.home.services.seanime.enable = true;
 
   home = {
-    username = "frozenfox";
-    homeDirectory = "/home/frozenfox";
+    homeDirectory = "/home/${config.home.username}";
   };
-
-  wayland.windowManager.hyprland.package =
-    inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.default;
 
   programs = {
     cava.enable = true;
@@ -22,9 +16,6 @@
     kitty.enable = true;
     vim.enable = true;
     mpv.enable = true;
-    # zsh.sessionVariables = {
-    #   NIXPKGS_ALLOW_UNFREE = "1";
-    # };
     osu-resources.enable = true; # Part of a local module
   };
 
