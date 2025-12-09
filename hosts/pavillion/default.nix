@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   ...
 }:
@@ -9,7 +8,6 @@
     ./copyparty.nix
   ];
 
-  nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
 
   nix.settings.allowed-users = [ "frozenfox" ];
@@ -60,9 +58,9 @@
 
   environment = {
     systemPackages = with pkgs; [
+      home-manager
       acpi
       tlp
-      home-manager
       nixd
       libnotify
       nil
@@ -80,7 +78,8 @@
       fastfetch
       easyeffects
       zed-editor
-      # inputs'.hyprcursor-rose-pine.packages.default
+      rose-pine-hyprcursor
+      vieb
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";

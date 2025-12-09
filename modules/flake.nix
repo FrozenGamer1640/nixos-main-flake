@@ -23,6 +23,7 @@
 
   outputs =
     {
+      packages,
       stylix,
       seanime,
       ...
@@ -35,10 +36,11 @@
         macchiato-cat = ./stylix/macchiato-cat;
       };
       nixosModules = {
+        inherit (packages.nixosModules) copyparty;
         default = ./nixos;
         fonts = ./nixos/fonts.nix;
-        locale-es-cr.nix = ./nixos/locale-es-cr.nix;
-        pipewire.nix = ./nixos/pipewire.nix;
+        locale-es-cr = ./nixos/locale-es-cr.nix;
+        pipewire = ./nixos/pipewire.nix;
         steam = ./nixos/steam.nix;
       };
       homeModules = {

@@ -38,15 +38,18 @@
       homeConfigurations = {
         "frozenfox" = homeConfiguration {
           pkgs = packages.withSystem "x86_64-linux" packages.nixpkgs;
-          overlays = with packages.overlays; [
-            default
-            copyparty
-            hyprland-packages
-            rose-pine-hyprcursor
-          ];
           modules =
             (importUser "frozenfox")
             ++ (with modules.homeModules; [
+              # Hey, this is a module btw
+              (packages.withOverlays (
+                with packages.overlays;
+                [
+                  default
+                  copyparty
+                  hyprland-packages
+                ]
+              ))
               modules.stylixModules.macchiato-cat
               git
               xdg

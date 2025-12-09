@@ -14,6 +14,7 @@
     {
       hosts,
       users,
+      ...
     }:
     {
       inherit (hosts) nixosConfigurations;

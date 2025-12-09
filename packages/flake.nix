@@ -2,12 +2,11 @@
   description = "Packages and overlays management sub-flake";
 
   inputs = {
-    systems.url = "github:nix-systems/default-linux";
     nixpkgs = {
       type = "github";
       owner = "nixos";
       repo = "nixpkgs";
-      ref = "nixos-24.11";
+      ref = "nixos-25.11";
     };
     nixpkgs-unstable = {
       type = "github";
@@ -46,7 +45,6 @@
   outputs =
     inputs@{
       self,
-      systems,
       nixpkgs,
       nixpkgs-unstable,
       ...
@@ -54,31 +52,42 @@
     {
       inherit nixpkgs nixpkgs-unstable;
 
-      eachSystem = nixpkgs.lib.genAttrs (import systems); # Directly extracted from the Hyprland's flake btw
+      # Add all the systems your flake will support
+      systems = [
+        "x86_64-linux"
+      ];
+      eachSystem = nixpkgs.lib.genAttrs self.systems; # Extracted from the Hyprland's flake btw
 
       forAllSystems =
-        nixpkgs-input: function: self.eachSystem (system: function nixpkgs-input.legacyPackages.${system});
+        nixpkgs-input: function: self.eachSystem (system: function (self.withSystem system nixpkgs-input));
 
       withSystem =
         system: nixpkgs:
         (import nixpkgs {
           inherit system;
-          allowUnfree = true;
+          config.allowUnfree = true; # You migth wanna delete this, but I really hate defining predications everytime
         });
+
+      withOverlays =
+        overlays:
+        (
+          { ... }:
+          {
+            nixpkgs.overlays = overlays;
+          }
+        );
 
       overlays = {
         inherit (inputs.hyprland.overlays) hyprland-packages;
         copyparty = inputs.copyparty.overlays.default;
-        rose-pine-hyprcursor = final: prev: {
-          rose-pine-cursor = inputs.rose-pine-cursor.packages.${prev.stdenv.hostPlatform.system}.default;
+        default = final: prev: {
+          osu-resources = final.callPackage ./osu-resources.nix { };
+          discord-presence-lsp = final.callPackage ./discord-presence-lsp.nix { };
+          vieb = (inputs.vieb.packagesFunc final).vieb;
         };
-        default = final: prev: self.packages.${prev.stdenv.hostPlatform.system};
       };
 
       packages = self.forAllSystems nixpkgs-unstable (pkgs: {
-        osu-resources = pkgs.callPackage ./osu-resources.nix;
-        discord-presence-lsp = pkgs.callPackage ./discord-presence-lsp.nix;
-        vieb = (inputs.vieb.packagesFunc pkgs).vieb;
       });
 
       nixosModules = {

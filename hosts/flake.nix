@@ -24,7 +24,7 @@
         ./${hostName}
         ./${hostName}/hardware-configuration.nix
         modules.nixosModules.default
-        modules.stylixModules.nixos
+        # modules.stylixModules.nixos
       ];
     in
     {
@@ -32,21 +32,24 @@
         # This one is an HP Pavillion (Gaming) Laptop btw
         pavillion = packages.nixpkgs.lib.nixosSystem {
           pkgs = withSystem "x86_64-linux" packages.nixpkgs;
-          overlays = with packages.overlays; [
-            default
-            copyparty
-            hyprland-packages
-            rose-pine-hyprcursor
-          ];
           modules =
             (importHost "pavillion")
             ++ (with modules.nixosModules; [
-              modules.stylixModules.macchiato-cat
+              # Hey, this is a module btw
+              (packages.withOverlays (
+                with packages.overlays;
+                [
+                  default
+                  copyparty
+                  hyprland-packages
+                ]
+              ))
+              # modules.stylixModules.macchiato-cat
+              copyparty
               fonts
               locale-es-cr
               pipewire
               steam
-              vieb-nix
             ]);
         };
       };
