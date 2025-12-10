@@ -1,4 +1,9 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 let
   palette = config.lib.stylix.colors;
 in
@@ -39,7 +44,8 @@ in
   home.packages = with pkgs; [
     kitty
     wofi
-    wl-clipboard grimblast
+    wl-clipboard
+    grimblast
   ];
 
   home.sessionVariables = {

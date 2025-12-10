@@ -1,7 +1,7 @@
 {
   config,
   lib,
-  local-pkgs,
+  pkgs,
   ...
 }:
 let
@@ -18,10 +18,10 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = [ local-pkgs.osu-resources ];
+    home.packages = [ pkgs.osu-resources ];
     home.sessionVariables.OSU_RESOURCES = cfg.targetDir;
     home.file."${cfg.targetDir}" = {
-      source = "${local-pkgs.osu-resources}";
+      source = "${pkgs.osu-resources}";
       target = cfg.targetDir;
     };
   };

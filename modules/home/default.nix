@@ -1,6 +1,3 @@
-{ inputs, ... }:
 {
-  imports = [
-    inputs.stylix.homeModules.stylix
-  ];
+  home.stateVersion = "25.11";
 }

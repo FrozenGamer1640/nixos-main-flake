@@ -1,23 +1,13 @@
 {
-  inputs',
   pkgs,
-  unstable-pkgs,
-  fuyuNixosModules,
   ...
 }:
 {
-  imports = with fuyuNixosModules; [
-    ./hardware-configuration.nix
+  imports = [
     ./nextcloud.nix
     ./copyparty.nix
-    fonts
-    locale-es-cr
-    pipewire
-    steam
-    vieb-nix
   ];
 
-  nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
 
   nix.settings.allowed-users = [ "frozenfox" ];
@@ -62,15 +52,15 @@
     };
     hyprland = {
       enable = true;
-      package = inputs'.hyprland.packages.default;
+      # package = inputs.hyprland.${pkgs.stdenv.system}.packages.default;
     };
   };
 
   environment = {
     systemPackages = with pkgs; [
+      home-manager
       acpi
       tlp
-      home-manager
       nixd
       libnotify
       nil
@@ -87,8 +77,9 @@
       inotify-tools
       fastfetch
       easyeffects
-      unstable-pkgs.zed-editor
-      inputs'.hyprcursor-rose-pine.packages.default
+      zed-editor
+      rose-pine-hyprcursor
+      vieb
     ];
     sessionVariables = {
       NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
