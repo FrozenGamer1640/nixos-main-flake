@@ -6,16 +6,21 @@
       type = "path";
       path = "./../packages";
     };
-    modules = {
+    nixosModules = {
       type = "path";
-      path = "./../modules";
+      path = "./../modules/nixos";
+    };
+    stylixModules = {
+      type = "path";
+      path = "./../modules/stylix";
     };
   };
 
   outputs =
     {
       packages,
-      modules,
+      nixosModules,
+      stylixModules,
       ...
     }:
     let
@@ -23,8 +28,8 @@
       importHost = hostName: [
         ./${hostName}
         ./${hostName}/hardware-configuration.nix
-        modules.nixosModules.default
-        # modules.stylixModules.nixos
+        nixosModules.nixosModules.default
+        nixosModules.stylixModules.nixos
       ];
     in
     {
@@ -34,17 +39,9 @@
           pkgs = withSystem "x86_64-linux" packages.nixpkgs;
           modules =
             (importHost "pavillion")
-            ++ (with modules.nixosModules; [
-              # Hey, this is a module btw
-              (packages.withOverlays (
-                with packages.overlays;
-                [
-                  default
-                  copyparty
-                  hyprland-packages
-                ]
-              ))
-              # modules.stylixModules.macchiato-cat
+            ++ (with nixosModules.nixosModules; [
+              packages.withAllOverlays
+              stylixModules.stylixModules.macchiato-cat
               copyparty
               fonts
               locale-es-cr

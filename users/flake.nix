@@ -13,9 +13,13 @@
       type = "path";
       path = "./../packages";
     };
-    modules = {
+    homeModules = {
       type = "path";
-      path = "./../modules";
+      path = "./../modules/home";
+    };
+    stylixModules = {
+      type = "path";
+      path = "./../modules/stylix";
     };
   };
 
@@ -23,15 +27,16 @@
     {
       home-manager,
       packages,
-      modules,
+      homeModules,
+      stylixModules,
       ...
     }:
     let
       homeConfiguration = home-manager.lib.homeManagerConfiguration;
       importUser = userName: [
         ./${userName}.nix
-        modules.homeModules.default
-        modules.stylixModules.home
+        homeModules.homeModules.default
+        stylixModules.stylixModules.home
         { home.username = "${userName}"; }
       ];
     in
@@ -41,9 +46,9 @@
           pkgs = packages.withSystem "x86_64-linux" packages.nixpkgs;
           modules =
             (importUser "frozenfox")
-            ++ (with modules.homeModules; [
+            ++ (with homeModules.homeModules; [
               packages.withAllOverlays
-              modules.stylixModules.macchiato-cat
+              stylixModules.stylixModules.macchiato-cat
               git
               xdg
               gpg
