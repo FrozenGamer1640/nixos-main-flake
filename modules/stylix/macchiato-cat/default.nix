@@ -14,7 +14,6 @@ in
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     polarity = "dark";
-    autoEnable = false;
     image = (config.lib.stylix.pixel "base01");
     fonts = {
       serif = hackNerdFont;

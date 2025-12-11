@@ -23,24 +23,13 @@
   environment = {
     systemPackages = with pkgs; [
       home-manager
-      acpi
-      tlp
       nixd
-      libnotify
       nil
-      btop
       p7zip
       imagemagick
-      starship
-      playerctl
       pavucontrol
       helvum
       inotify-tools
-      fastfetch
-      easyeffects
-      zed-editor
-      rose-pine-hyprcursor
-      vesktop
     ];
     # sessionVariables = {
     # NIXOS_OZONE_WL = "1";

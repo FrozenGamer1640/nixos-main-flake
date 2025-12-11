@@ -31,7 +31,10 @@
         ];
       };
       homeModules.default = {
-        imports = [ ./home ];
+        imports = with homeModules.homeModules; [
+          ./home
+          osu-resources
+        ];
       };
     };
 }

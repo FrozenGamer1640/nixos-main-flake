@@ -43,11 +43,4 @@ in
     wofi
     wl-clipboard
   ];
-
-  home.sessionVariables = {
-    XCURSOR_SIZE = "24";
-    HYPRCURSOR_THEME = "rose-pine-hyprcursor";
-    HYPRCURSOR_SIZE = "24";
-    GDK_BACKEND = "wayland";
-  };
 }

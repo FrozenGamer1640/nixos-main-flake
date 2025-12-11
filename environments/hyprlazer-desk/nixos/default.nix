@@ -3,6 +3,10 @@
   ...
 }:
 {
+  imports = [
+    ./yazi
+  ];
+
   services = {
     hypridle = {
       enable = true;
@@ -14,6 +18,8 @@
     };
     dbus.enable = true;
     playerctld.enable = true;
+    acpid.enable = true;
+    tlp.enable = true;
     displayManager.ly = {
       enable = true;
     };
@@ -30,11 +36,6 @@
     ];
   };
 
-  stylix.targets = {
-    wofi.enable = true;
-    vim.enable = true;
-  };
-
   users.defaultUserShell = pkgs.zsh;
   programs = {
     hyprland = {
@@ -49,13 +50,24 @@
       enable = true;
       openFirewall = true;
     };
+    vim = {
+      enable = true;
+      defaultEditor = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
+    rose-pine-hyprcursor
     ripgrep
     wl-clipboard
     wofi
     vieb
-    vim
   ];
+
+  environment.sessionVariables = {
+    XCURSOR_SIZE = "24";
+    HYPRCURSOR_SIZE = "24";
+    HYPRCURSOR_THEME = "rose-pine-hyprcursor";
+    GDK_BACKEND = "wayland";
+  };
 }
