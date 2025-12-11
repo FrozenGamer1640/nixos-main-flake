@@ -21,6 +21,10 @@
       type = "path";
       path = "./../modules/stylix";
     };
+    environments = {
+      type = "path";
+      path = "./../environments";
+    };
   };
 
   outputs =
@@ -29,6 +33,7 @@
       packages,
       homeModules,
       stylixModules,
+      environments,
       ...
     }:
     let
@@ -49,17 +54,12 @@
             ++ (with homeModules.homeModules; [
               packages.withAllOverlays
               stylixModules.stylixModules.macchiato-cat
+              environments.hyprlazer-desk.homeModules.default
               git
               xdg
               gpg
               dunst
               zsh
-              eww
-              hyprland
-              kitty
-              zed-editor
-              quickshell
-              osu-resources
               seanime
             ]);
         };

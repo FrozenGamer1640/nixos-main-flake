@@ -14,6 +14,10 @@
       type = "path";
       path = "./../modules/stylix";
     };
+    environments = {
+      type = "path";
+      path = "./../environments";
+    };
   };
 
   outputs =
@@ -21,6 +25,7 @@
       packages,
       nixosModules,
       stylixModules,
+      environments,
       ...
     }:
     let
@@ -42,6 +47,7 @@
             ++ (with nixosModules.nixosModules; [
               packages.withAllOverlays
               stylixModules.stylixModules.macchiato-cat
+              environments.hyprlazer-desk.nixosModules.default
               copyparty
               fonts
               locale-es-cr
