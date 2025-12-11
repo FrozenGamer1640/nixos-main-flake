@@ -33,6 +33,7 @@
         "osu-resources"
         "xdg"
         "zed-editor"
+        "hyprsunset"
       ] (moduleName: ./${moduleName}));
     };
 }
