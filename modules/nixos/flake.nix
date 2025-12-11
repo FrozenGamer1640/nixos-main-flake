@@ -16,6 +16,7 @@
     {
       nixosModules = {
         inherit (packages.nixosModules) copyparty;
+        starship.frosted-kebab = ./starship/frosted-kebab.nix;
       }
       // (packages.nixpkgs.lib.genAttrs [
         "default"

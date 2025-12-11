@@ -6,6 +6,10 @@
       type = "path";
       path = "../../packages";
     };
+    nixosModules = {
+      type = "path";
+      path = "../../modules/nixos";
+    };
     homeModules = {
       type = "path";
       path = "../../modules/home";
@@ -15,12 +19,16 @@
   outputs =
     {
       packages,
+      nixosModules,
       homeModules,
       ...
     }:
     {
       nixosModules.default = {
-        imports = [ ./nixos ];
+        imports = with nixosModules.nixosModules; [
+          ./nixos
+          starship.frosted-kebab
+        ];
       };
       homeModules.default = {
         imports = [ ./home ];

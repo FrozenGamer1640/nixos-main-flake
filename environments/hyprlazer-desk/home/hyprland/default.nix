@@ -16,15 +16,13 @@ in
   };
 
   services = {
-    hyprpolkitagent.enable = true;
-    hyprsunset.enable = true;
     hypridle.enable = true;
     hyprpaper.enable = true;
+    hyprpolkitagent.enable = true;
   };
 
   programs = {
-    hyprlock.enable = true;
-    kitty.enable = true;
+    hyprshot.enable = true;
     yazi.enable = true;
   };
 
@@ -42,10 +40,8 @@ in
   };
 
   home.packages = with pkgs; [
-    kitty
     wofi
     wl-clipboard
-    grimblast
   ];
 
   home.sessionVariables = {
