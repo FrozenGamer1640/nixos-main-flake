@@ -39,7 +39,7 @@
     let
       homeConfiguration = home-manager.lib.homeManagerConfiguration;
       importUser = userName: [
-        ./${userName}.nix
+        ./${userName}
         homeModules.homeModules.default
         { home.username = "${userName}"; }
       ];
