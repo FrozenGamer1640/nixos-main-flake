@@ -28,7 +28,6 @@
       // (packages.nixpkgs.lib.genAttrs [
         "dunst"
         "git"
-        "starship"
         "zsh"
         "osu-resources"
         "xdg"

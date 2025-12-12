@@ -56,7 +56,6 @@
               environments.hyprlazer-desk.homeModules.default
               git
               xdg
-              gpg
               dunst
               zsh
               seanime
