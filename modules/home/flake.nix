@@ -4,7 +4,7 @@
   inputs = {
     packages = {
       type = "path";
-      path = "../packages";
+      path = "../../packages";
     };
     seanime = {
       type = "github";
