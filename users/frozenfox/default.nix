@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }:
 {
@@ -15,6 +16,7 @@
     mpv.enable = true;
   };
 
+  home.homeDirectory = "/home/${config.home.username}";
   home.packages = with pkgs; [
     youtube-music
     wl-clicker
