@@ -34,7 +34,7 @@
         ./${hostName}
         ./${hostName}/hardware-configuration.nix
         nixosModules.nixosModules.default
-        nixosModules.stylixModules.nixos
+        stylixModules.stylixModules.nixos
       ];
     in
     {
