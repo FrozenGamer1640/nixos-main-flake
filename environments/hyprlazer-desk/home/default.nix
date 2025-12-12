@@ -9,6 +9,11 @@
 
   services = {
     easyeffects.enable = true;
+    hypridle.settings = {
+      general = {
+        lock_cmd = "hyprlock";
+      };
+    };
   };
 
   programs = {

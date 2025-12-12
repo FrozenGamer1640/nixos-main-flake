@@ -8,14 +8,7 @@
   ];
 
   services = {
-    hypridle = {
-      enable = true;
-      settings = {
-        general = {
-          lock_cmd = "hyprlock";
-        };
-      };
-    };
+    hypridle.enable = true;
     dbus.enable = true;
     playerctld.enable = true;
     acpid.enable = true;
