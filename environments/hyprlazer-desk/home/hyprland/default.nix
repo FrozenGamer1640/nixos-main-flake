@@ -8,13 +8,6 @@ let
   palette = config.lib.stylix.colors;
 in
 {
-  stylix.targets = {
-    hyprland.enable = true;
-    hyprpaper.enable = true;
-    hyprlock.enable = true;
-    yazi.enable = true;
-  };
-
   services = {
     hypridle.enable = true;
     hyprpaper.enable = true;
@@ -23,7 +16,6 @@ in
 
   programs = {
     hyprshot.enable = true;
-    yazi.enable = true;
   };
 
   wayland.windowManager.hyprland = {
