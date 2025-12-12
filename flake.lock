@@ -57,6 +57,108 @@
       "inputs": {
         "hyprutils": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "hyprwayland-scanner": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprwayland-scanner"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760101617,
+        "narHash": "sha256-8jf/3ZCi+B7zYpIyV04+3wm72BD7Z801IlOzsOACR7I=",
+        "owner": "hyprwm",
+        "repo": "aquamarine",
+        "rev": "1826a9923881320306231b1c2090379ebf9fa4f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "aquamarine",
+        "type": "github"
+      }
+    },
+    "aquamarine_11": {
+      "inputs": {
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "hyprwayland-scanner": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprwayland-scanner"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760101617,
+        "narHash": "sha256-8jf/3ZCi+B7zYpIyV04+3wm72BD7Z801IlOzsOACR7I=",
+        "owner": "hyprwm",
+        "repo": "aquamarine",
+        "rev": "1826a9923881320306231b1c2090379ebf9fa4f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "aquamarine",
+        "type": "github"
+      }
+    },
+    "aquamarine_12": {
+      "inputs": {
+        "hyprutils": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -98,7 +200,7 @@
         "type": "github"
       }
     },
-    "aquamarine_11": {
+    "aquamarine_13": {
       "inputs": {
         "hyprutils": [
           "users",
@@ -139,7 +241,7 @@
         "type": "github"
       }
     },
-    "aquamarine_12": {
+    "aquamarine_14": {
       "inputs": {
         "hyprutils": [
           "users",
@@ -290,28 +392,36 @@
       "inputs": {
         "hyprutils": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -335,24 +445,28 @@
       "inputs": {
         "hyprutils": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -376,28 +490,24 @@
       "inputs": {
         "hyprutils": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -420,37 +530,29 @@
     "aquamarine_7": {
       "inputs": {
         "hyprutils": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -476,7 +578,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -485,7 +587,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
@@ -494,7 +596,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -503,7 +605,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -529,6 +631,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -537,6 +640,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
@@ -545,6 +649,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -553,6 +658,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -624,6 +730,40 @@
         "type": "github"
       }
     },
+    "base16-fish_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754405784,
+        "narHash": "sha256-l9xHIy+85FN+bEo6yquq2IjD1rSg9fjfjpyGP1W8YXo=",
+        "owner": "tomyun",
+        "repo": "base16-fish",
+        "rev": "23ae20a0093dca0d7b39d76ba2401af0ccf9c561",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tomyun",
+        "repo": "base16-fish",
+        "rev": "23ae20a0093dca0d7b39d76ba2401af0ccf9c561",
+        "type": "github"
+      }
+    },
+    "base16-fish_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754405784,
+        "narHash": "sha256-l9xHIy+85FN+bEo6yquq2IjD1rSg9fjfjpyGP1W8YXo=",
+        "owner": "tomyun",
+        "repo": "base16-fish",
+        "rev": "23ae20a0093dca0d7b39d76ba2401af0ccf9c561",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tomyun",
+        "repo": "base16-fish",
+        "rev": "23ae20a0093dca0d7b39d76ba2401af0ccf9c561",
+        "type": "github"
+      }
+    },
     "base16-helix": {
       "flake": false,
       "locked": {
@@ -641,6 +781,38 @@
       }
     },
     "base16-helix_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760703920,
+        "narHash": "sha256-m82fGUYns4uHd+ZTdoLX2vlHikzwzdu2s2rYM2bNwzw=",
+        "owner": "tinted-theming",
+        "repo": "base16-helix",
+        "rev": "d646af9b7d14bff08824538164af99d0c521b185",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "base16-helix",
+        "type": "github"
+      }
+    },
+    "base16-helix_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1760703920,
+        "narHash": "sha256-m82fGUYns4uHd+ZTdoLX2vlHikzwzdu2s2rYM2bNwzw=",
+        "owner": "tinted-theming",
+        "repo": "base16-helix",
+        "rev": "d646af9b7d14bff08824538164af99d0c521b185",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "base16-helix",
+        "type": "github"
+      }
+    },
+    "base16-helix_4": {
       "flake": false,
       "locked": {
         "lastModified": 1760703920,
@@ -690,9 +862,79 @@
         "type": "github"
       }
     },
+    "base16-vim_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732806396,
+        "narHash": "sha256-e0bpPySdJf0F68Ndanwm+KWHgQiZ0s7liLhvJSWDNsA=",
+        "owner": "tinted-theming",
+        "repo": "base16-vim",
+        "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "base16-vim",
+        "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",
+        "type": "github"
+      }
+    },
+    "base16-vim_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1732806396,
+        "narHash": "sha256-e0bpPySdJf0F68Ndanwm+KWHgQiZ0s7liLhvJSWDNsA=",
+        "owner": "tinted-theming",
+        "repo": "base16-vim",
+        "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "base16-vim",
+        "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",
+        "type": "github"
+      }
+    },
     "base16_2": {
       "inputs": {
         "fromYaml": "fromYaml_2"
+      },
+      "locked": {
+        "lastModified": 1755819240,
+        "narHash": "sha256-qcMhnL7aGAuFuutH4rq9fvAhCpJWVHLcHVZLtPctPlo=",
+        "owner": "SenchoPens",
+        "repo": "base16.nix",
+        "rev": "75ed5e5e3fce37df22e49125181fa37899c3ccd6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SenchoPens",
+        "repo": "base16.nix",
+        "type": "github"
+      }
+    },
+    "base16_3": {
+      "inputs": {
+        "fromYaml": "fromYaml_3"
+      },
+      "locked": {
+        "lastModified": 1755819240,
+        "narHash": "sha256-qcMhnL7aGAuFuutH4rq9fvAhCpJWVHLcHVZLtPctPlo=",
+        "owner": "SenchoPens",
+        "repo": "base16.nix",
+        "rev": "75ed5e5e3fce37df22e49125181fa37899c3ccd6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SenchoPens",
+        "repo": "base16.nix",
+        "type": "github"
+      }
+    },
+    "base16_4": {
+      "inputs": {
+        "fromYaml": "fromYaml_4"
       },
       "locked": {
         "lastModified": 1755819240,
@@ -739,7 +981,8 @@
         "flake-utils": "flake-utils_10",
         "nixpkgs": [
           "users",
-          "homeModules",
+          "environments",
+          "hyprlazer-desk",
           "packages",
           "nixpkgs"
         ]
@@ -763,6 +1006,9 @@
         "flake-utils": "flake-utils_11",
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -784,6 +1030,53 @@
     "copyparty_12": {
       "inputs": {
         "flake-utils": "flake-utils_12",
+        "nixpkgs": [
+          "users",
+          "homeModules",
+          "packages",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765471315,
+        "narHash": "sha256-2mcbI+hoACvVPgewj5MHGHjNGRuJmgAnqzt89OpUW9U=",
+        "owner": "9001",
+        "repo": "copyparty",
+        "rev": "7d526eaba32d953e2dfbb3931f01cddc6109c1f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "9001",
+        "repo": "copyparty",
+        "type": "github"
+      }
+    },
+    "copyparty_13": {
+      "inputs": {
+        "flake-utils": "flake-utils_13",
+        "nixpkgs": [
+          "users",
+          "packages",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765471315,
+        "narHash": "sha256-2mcbI+hoACvVPgewj5MHGHjNGRuJmgAnqzt89OpUW9U=",
+        "owner": "9001",
+        "repo": "copyparty",
+        "rev": "7d526eaba32d953e2dfbb3931f01cddc6109c1f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "9001",
+        "repo": "copyparty",
+        "type": "github"
+      }
+    },
+    "copyparty_14": {
+      "inputs": {
+        "flake-utils": "flake-utils_14",
         "nixpkgs": [
           "users",
           "stylixModules",
@@ -861,7 +1154,9 @@
         "flake-utils": "flake-utils_4",
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -885,6 +1180,7 @@
         "flake-utils": "flake-utils_5",
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "nixpkgs"
         ]
@@ -908,7 +1204,6 @@
         "flake-utils": "flake-utils_6",
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -931,10 +1226,8 @@
       "inputs": {
         "flake-utils": "flake-utils_7",
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -960,7 +1253,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "nixpkgs"
         ]
@@ -986,6 +1279,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "nixpkgs"
         ]
@@ -1068,6 +1362,38 @@
         "type": "github"
       }
     },
+    "firefox-gnome-theme_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764724327,
+        "narHash": "sha256-OkFLrD3pFR952TrjQi1+Vdj604KLcMnkpa7lkW7XskI=",
+        "owner": "rafaelmardojai",
+        "repo": "firefox-gnome-theme",
+        "rev": "66b7c635763d8e6eb86bd766de5a1e1fbfcc1047",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rafaelmardojai",
+        "repo": "firefox-gnome-theme",
+        "type": "github"
+      }
+    },
+    "firefox-gnome-theme_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764724327,
+        "narHash": "sha256-OkFLrD3pFR952TrjQi1+Vdj604KLcMnkpa7lkW7XskI=",
+        "owner": "rafaelmardojai",
+        "repo": "firefox-gnome-theme",
+        "rev": "66b7c635763d8e6eb86bd766de5a1e1fbfcc1047",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rafaelmardojai",
+        "repo": "firefox-gnome-theme",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -1117,6 +1443,38 @@
       }
     },
     "flake-compat_12": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1747046372,
+        "narHash": "sha256-CIVLLkVgvHYbgI2UpXvIIBJ12HWgX+fjA8Xf8PUmqCY=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "9100a0f413b0c601e0533d1d94ffd501ce2e7885",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-compat_13": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1747046372,
+        "narHash": "sha256-CIVLLkVgvHYbgI2UpXvIIBJ12HWgX+fjA8Xf8PUmqCY=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "9100a0f413b0c601e0533d1d94ffd501ce2e7885",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-compat_14": {
       "flake": false,
       "locked": {
         "lastModified": 1747046372,
@@ -1264,6 +1622,8 @@
       "inputs": {
         "nixpkgs-lib": [
           "hosts",
+          "environments",
+          "hyprlazer-desk",
           "stylixModules",
           "stylix",
           "nixpkgs"
@@ -1284,6 +1644,54 @@
       }
     },
     "flake-parts_2": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "hosts",
+          "stylixModules",
+          "stylix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_3": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "stylix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1763759067,
+        "narHash": "sha256-LlLt2Jo/gMNYAwOgdRQBrsRoOz7BPRkzvNaI/fzXi2Q=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "2cccadc7357c0ba201788ae99c4dfa90728ef5e0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_4": {
       "inputs": {
         "nixpkgs-lib": [
           "users",
@@ -1352,6 +1760,36 @@
       }
     },
     "flake-utils_12": {
+      "locked": {
+        "lastModified": 1678901627,
+        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_13": {
+      "locked": {
+        "lastModified": 1678901627,
+        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_14": {
       "locked": {
         "lastModified": 1678901627,
         "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
@@ -1518,6 +1956,38 @@
         "type": "github"
       }
     },
+    "fromYaml_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731966426,
+        "narHash": "sha256-lq95WydhbUTWig/JpqiB7oViTcHFP8Lv41IGtayokA8=",
+        "owner": "SenchoPens",
+        "repo": "fromYaml",
+        "rev": "106af9e2f715e2d828df706c386a685698f3223b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SenchoPens",
+        "repo": "fromYaml",
+        "type": "github"
+      }
+    },
+    "fromYaml_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1731966426,
+        "narHash": "sha256-lq95WydhbUTWig/JpqiB7oViTcHFP8Lv41IGtayokA8=",
+        "owner": "SenchoPens",
+        "repo": "fromYaml",
+        "rev": "106af9e2f715e2d828df706c386a685698f3223b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SenchoPens",
+        "repo": "fromYaml",
+        "type": "github"
+      }
+    },
     "gitignore": {
       "inputs": {
         "nixpkgs": [
@@ -1549,7 +2019,8 @@
       "inputs": {
         "nixpkgs": [
           "users",
-          "homeModules",
+          "environments",
+          "hyprlazer-desk",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1574,6 +2045,9 @@
       "inputs": {
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1595,6 +2069,55 @@
       }
     },
     "gitignore_12": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "homeModules",
+          "packages",
+          "hyprland",
+          "pre-commit-hooks",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1709087332,
+        "narHash": "sha256-HG2cCnktfHsKV0s4XW83gU3F57gaTljL9KNSuG6bnQs=",
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "rev": "637db329424fd7e46cf4185293b9cc8c88c95394",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "type": "github"
+      }
+    },
+    "gitignore_13": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "packages",
+          "hyprland",
+          "pre-commit-hooks",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1709087332,
+        "narHash": "sha256-HG2cCnktfHsKV0s4XW83gU3F57gaTljL9KNSuG6bnQs=",
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "rev": "637db329424fd7e46cf4185293b9cc8c88c95394",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "type": "github"
+      }
+    },
+    "gitignore_14": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -1676,7 +2199,9 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1701,6 +2226,7 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1725,7 +2251,6 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1749,10 +2274,8 @@
     "gitignore_7": {
       "inputs": {
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1779,7 +2302,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1806,6 +2329,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "pre-commit-hooks",
@@ -1846,6 +2370,44 @@
       }
     },
     "gnome-shell_2": {
+      "flake": false,
+      "locked": {
+        "host": "gitlab.gnome.org",
+        "lastModified": 1764524476,
+        "narHash": "sha256-bTmNn3Q4tMQ0J/P0O5BfTQwqEnCiQIzOGef9/aqAZvk=",
+        "owner": "GNOME",
+        "repo": "gnome-shell",
+        "rev": "c0e1ad9f0f703fd0519033b8f46c3267aab51a22",
+        "type": "gitlab"
+      },
+      "original": {
+        "host": "gitlab.gnome.org",
+        "owner": "GNOME",
+        "ref": "gnome-49",
+        "repo": "gnome-shell",
+        "type": "gitlab"
+      }
+    },
+    "gnome-shell_3": {
+      "flake": false,
+      "locked": {
+        "host": "gitlab.gnome.org",
+        "lastModified": 1764524476,
+        "narHash": "sha256-bTmNn3Q4tMQ0J/P0O5BfTQwqEnCiQIzOGef9/aqAZvk=",
+        "owner": "GNOME",
+        "repo": "gnome-shell",
+        "rev": "c0e1ad9f0f703fd0519033b8f46c3267aab51a22",
+        "type": "gitlab"
+      },
+      "original": {
+        "host": "gitlab.gnome.org",
+        "owner": "GNOME",
+        "ref": "gnome-49",
+        "repo": "gnome-shell",
+        "type": "gitlab"
+      }
+    },
+    "gnome-shell_4": {
       "flake": false,
       "locked": {
         "host": "gitlab.gnome.org",
@@ -1908,7 +2470,7 @@
     },
     "homeModules_2": {
       "inputs": {
-        "packages": "packages_7",
+        "packages": "packages_8",
         "seanime": "seanime_2"
       },
       "locked": {
@@ -1927,7 +2489,7 @@
     },
     "homeModules_3": {
       "inputs": {
-        "packages": "packages_10",
+        "packages": "packages_12",
         "seanime": "seanime_3"
       },
       "locked": {
@@ -1946,8 +2508,8 @@
       "inputs": {
         "environments": "environments",
         "nixosModules": "nixosModules_2",
-        "packages": "packages_5",
-        "stylixModules": "stylixModules"
+        "packages": "packages_6",
+        "stylixModules": "stylixModules_2"
       },
       "locked": {
         "path": "./hosts",
@@ -2007,6 +2569,91 @@
       "inputs": {
         "hyprlang": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprlang"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753964049,
+        "narHash": "sha256-lIqabfBY7z/OANxHoPeIrDJrFyYy9jAM4GQLzZ2feCM=",
+        "owner": "hyprwm",
+        "repo": "hyprcursor",
+        "rev": "44e91d467bdad8dcf8bbd2ac7cf49972540980a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprcursor",
+        "type": "github"
+      }
+    },
+    "hyprcursor_11": {
+      "inputs": {
+        "hyprlang": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprlang"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753964049,
+        "narHash": "sha256-lIqabfBY7z/OANxHoPeIrDJrFyYy9jAM4GQLzZ2feCM=",
+        "owner": "hyprwm",
+        "repo": "hyprcursor",
+        "rev": "44e91d467bdad8dcf8bbd2ac7cf49972540980a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprcursor",
+        "type": "github"
+      }
+    },
+    "hyprcursor_12": {
+      "inputs": {
+        "hyprlang": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -2041,7 +2688,7 @@
         "type": "github"
       }
     },
-    "hyprcursor_11": {
+    "hyprcursor_13": {
       "inputs": {
         "hyprlang": [
           "users",
@@ -2076,7 +2723,7 @@
         "type": "github"
       }
     },
-    "hyprcursor_12": {
+    "hyprcursor_14": {
       "inputs": {
         "hyprlang": [
           "users",
@@ -2203,21 +2850,27 @@
       "inputs": {
         "hyprlang": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -2241,18 +2894,21 @@
       "inputs": {
         "hyprlang": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -2276,21 +2932,18 @@
       "inputs": {
         "hyprlang": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -2313,28 +2966,22 @@
     "hyprcursor_7": {
       "inputs": {
         "hyprlang": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -2360,7 +3007,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprlang"
@@ -2369,7 +3016,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -2378,7 +3025,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -2404,6 +3051,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprlang"
@@ -2412,6 +3060,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -2420,6 +3069,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -2487,6 +3137,91 @@
       "inputs": {
         "hyprutils": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760445448,
+        "narHash": "sha256-fXGjL6dw31FPFRrmIemzGiNSlfvEJTJNsmadZi+qNhI=",
+        "owner": "hyprwm",
+        "repo": "hyprgraphics",
+        "rev": "50fb9f069219f338a11cf0bcccb9e58357d67757",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprgraphics",
+        "type": "github"
+      }
+    },
+    "hyprgraphics_11": {
+      "inputs": {
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760445448,
+        "narHash": "sha256-fXGjL6dw31FPFRrmIemzGiNSlfvEJTJNsmadZi+qNhI=",
+        "owner": "hyprwm",
+        "repo": "hyprgraphics",
+        "rev": "50fb9f069219f338a11cf0bcccb9e58357d67757",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprgraphics",
+        "type": "github"
+      }
+    },
+    "hyprgraphics_12": {
+      "inputs": {
+        "hyprutils": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -2521,7 +3256,7 @@
         "type": "github"
       }
     },
-    "hyprgraphics_11": {
+    "hyprgraphics_13": {
       "inputs": {
         "hyprutils": [
           "users",
@@ -2556,7 +3291,7 @@
         "type": "github"
       }
     },
-    "hyprgraphics_12": {
+    "hyprgraphics_14": {
       "inputs": {
         "hyprutils": [
           "users",
@@ -2683,21 +3418,27 @@
       "inputs": {
         "hyprutils": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -2721,18 +3462,21 @@
       "inputs": {
         "hyprutils": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -2756,21 +3500,18 @@
       "inputs": {
         "hyprutils": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -2793,28 +3534,22 @@
     "hyprgraphics_7": {
       "inputs": {
         "hyprutils": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -2840,7 +3575,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -2849,7 +3584,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -2858,7 +3593,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -2884,6 +3619,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -2892,6 +3628,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -2900,6 +3637,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -2995,6 +3733,74 @@
       "inputs": {
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759610243,
+        "narHash": "sha256-+KEVnKBe8wz+a6dTLq8YDcF3UrhQElwsYJaVaHXJtoI=",
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols",
+        "rev": "bd153e76f751f150a09328dbdeb5e4fab9d23622",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols",
+        "type": "github"
+      }
+    },
+    "hyprland-protocols_11": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759610243,
+        "narHash": "sha256-+KEVnKBe8wz+a6dTLq8YDcF3UrhQElwsYJaVaHXJtoI=",
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols",
+        "rev": "bd153e76f751f150a09328dbdeb5e4fab9d23622",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-protocols",
+        "type": "github"
+      }
+    },
+    "hyprland-protocols_12": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -3022,7 +3828,7 @@
         "type": "github"
       }
     },
-    "hyprland-protocols_11": {
+    "hyprland-protocols_13": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -3051,7 +3857,7 @@
         "type": "github"
       }
     },
-    "hyprland-protocols_12": {
+    "hyprland-protocols_14": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -3154,14 +3960,18 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -3185,12 +3995,14 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -3214,14 +4026,12 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -3244,19 +4054,15 @@
     "hyprland-protocols_7": {
       "inputs": {
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -3282,7 +4088,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -3291,7 +4097,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -3317,6 +4123,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -3325,6 +4132,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -3395,6 +4203,97 @@
       "inputs": {
         "hyprlang": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "hyprlang"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749154592,
+        "narHash": "sha256-DO7z5CeT/ddSGDEnK9mAXm1qlGL47L3VAHLlLXoCjhE=",
+        "owner": "hyprwm",
+        "repo": "hyprland-qt-support",
+        "rev": "4c8053c3c888138a30c3a6c45c2e45f5484f2074",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-qt-support",
+        "type": "github"
+      }
+    },
+    "hyprland-qt-support_11": {
+      "inputs": {
+        "hyprlang": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "hyprlang"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1749154592,
+        "narHash": "sha256-DO7z5CeT/ddSGDEnK9mAXm1qlGL47L3VAHLlLXoCjhE=",
+        "owner": "hyprwm",
+        "repo": "hyprland-qt-support",
+        "rev": "4c8053c3c888138a30c3a6c45c2e45f5484f2074",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-qt-support",
+        "type": "github"
+      }
+    },
+    "hyprland-qt-support_12": {
+      "inputs": {
+        "hyprlang": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -3432,7 +4331,7 @@
         "type": "github"
       }
     },
-    "hyprland-qt-support_11": {
+    "hyprland-qt-support_13": {
       "inputs": {
         "hyprlang": [
           "users",
@@ -3470,7 +4369,7 @@
         "type": "github"
       }
     },
-    "hyprland-qt-support_12": {
+    "hyprland-qt-support_14": {
       "inputs": {
         "hyprlang": [
           "users",
@@ -3606,7 +4505,9 @@
       "inputs": {
         "hyprlang": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3614,7 +4515,9 @@
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3622,7 +4525,9 @@
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3647,6 +4552,7 @@
       "inputs": {
         "hyprlang": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3654,6 +4560,7 @@
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3661,6 +4568,7 @@
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3685,7 +4593,6 @@
       "inputs": {
         "hyprlang": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3693,7 +4600,6 @@
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3701,7 +4607,6 @@
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3725,30 +4630,24 @@
     "hyprland-qt-support_7": {
       "inputs": {
         "hyprlang": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
           "hyprlang"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3775,7 +4674,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3785,7 +4684,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3795,7 +4694,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3822,6 +4721,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3831,6 +4731,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3840,6 +4741,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -3921,6 +4823,114 @@
         "hyprland-qt-support": "hyprland-qt-support_10",
         "hyprlang": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprlang"
+        ],
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "hyprlang",
+          "hyprutils"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759080228,
+        "narHash": "sha256-RgDoAja0T1hnF0pTc56xPfLfFOO8Utol2iITwYbUhTk=",
+        "owner": "hyprwm",
+        "repo": "hyprland-qtutils",
+        "rev": "629b15c19fa4082e4ce6be09fdb89e8c3312aed7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-qtutils",
+        "type": "github"
+      }
+    },
+    "hyprland-qtutils_11": {
+      "inputs": {
+        "hyprland-qt-support": "hyprland-qt-support_11",
+        "hyprlang": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprlang"
+        ],
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprland-qtutils",
+          "hyprlang",
+          "hyprutils"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759080228,
+        "narHash": "sha256-RgDoAja0T1hnF0pTc56xPfLfFOO8Utol2iITwYbUhTk=",
+        "owner": "hyprwm",
+        "repo": "hyprland-qtutils",
+        "rev": "629b15c19fa4082e4ce6be09fdb89e8c3312aed7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprland-qtutils",
+        "type": "github"
+      }
+    },
+    "hyprland-qtutils_12": {
+      "inputs": {
+        "hyprland-qt-support": "hyprland-qt-support_12",
+        "hyprlang": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -3964,9 +4974,9 @@
         "type": "github"
       }
     },
-    "hyprland-qtutils_11": {
+    "hyprland-qtutils_13": {
       "inputs": {
-        "hyprland-qt-support": "hyprland-qt-support_11",
+        "hyprland-qt-support": "hyprland-qt-support_13",
         "hyprlang": [
           "users",
           "packages",
@@ -4008,9 +5018,9 @@
         "type": "github"
       }
     },
-    "hyprland-qtutils_12": {
+    "hyprland-qtutils_14": {
       "inputs": {
-        "hyprland-qt-support": "hyprland-qt-support_12",
+        "hyprland-qt-support": "hyprland-qt-support_14",
         "hyprlang": [
           "users",
           "stylixModules",
@@ -4169,14 +5179,18 @@
         "hyprland-qt-support": "hyprland-qt-support_4",
         "hyprlang": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -4185,14 +5199,18 @@
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -4217,12 +5235,14 @@
         "hyprland-qt-support": "hyprland-qt-support_5",
         "hyprlang": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -4231,12 +5251,14 @@
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -4261,14 +5283,12 @@
         "hyprland-qt-support": "hyprland-qt-support_6",
         "hyprlang": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -4277,14 +5297,12 @@
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -4308,19 +5326,15 @@
       "inputs": {
         "hyprland-qt-support": "hyprland-qt-support_7",
         "hyprlang": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -4328,19 +5342,15 @@
           "hyprutils"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -4367,7 +5377,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprlang"
@@ -4376,7 +5386,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -4387,7 +5397,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -4396,7 +5406,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -4423,6 +5433,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprlang"
@@ -4431,6 +5442,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-qtutils",
@@ -4441,6 +5453,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -4449,6 +5462,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -4480,12 +5494,13 @@
         "hyprwayland-scanner": "hyprwayland-scanner_10",
         "nixpkgs": [
           "users",
-          "homeModules",
+          "environments",
+          "hyprlazer-desk",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_10",
-        "systems": "systems_11",
+        "systems": "systems_12",
         "xdph": "xdph_10"
       },
       "locked": {
@@ -4515,11 +5530,14 @@
         "hyprwayland-scanner": "hyprwayland-scanner_11",
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_11",
-        "systems": "systems_12",
+        "systems": "systems_13",
         "xdph": "xdph_11"
       },
       "locked": {
@@ -4549,13 +5567,82 @@
         "hyprwayland-scanner": "hyprwayland-scanner_12",
         "nixpkgs": [
           "users",
-          "stylixModules",
+          "homeModules",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_12",
-        "systems": "systems_13",
+        "systems": "systems_15",
         "xdph": "xdph_12"
+      },
+      "locked": {
+        "lastModified": 1761601798,
+        "narHash": "sha256-sgZlcW1W6ioNFaMz+r4O52SLNywzRJiqRwBKRenvL6c=",
+        "owner": "hyprwm",
+        "repo": "Hyprland",
+        "rev": "7d22a2df76e21b35edb6787807fbbae0993aa1f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "ref": "nix",
+        "repo": "Hyprland",
+        "type": "github"
+      }
+    },
+    "hyprland_13": {
+      "inputs": {
+        "aquamarine": "aquamarine_13",
+        "hyprcursor": "hyprcursor_13",
+        "hyprgraphics": "hyprgraphics_13",
+        "hyprland-protocols": "hyprland-protocols_13",
+        "hyprland-qtutils": "hyprland-qtutils_13",
+        "hyprlang": "hyprlang_13",
+        "hyprutils": "hyprutils_13",
+        "hyprwayland-scanner": "hyprwayland-scanner_13",
+        "nixpkgs": [
+          "users",
+          "packages",
+          "nixpkgs-unstable"
+        ],
+        "pre-commit-hooks": "pre-commit-hooks_13",
+        "systems": "systems_16",
+        "xdph": "xdph_13"
+      },
+      "locked": {
+        "lastModified": 1761601798,
+        "narHash": "sha256-sgZlcW1W6ioNFaMz+r4O52SLNywzRJiqRwBKRenvL6c=",
+        "owner": "hyprwm",
+        "repo": "Hyprland",
+        "rev": "7d22a2df76e21b35edb6787807fbbae0993aa1f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "ref": "nix",
+        "repo": "Hyprland",
+        "type": "github"
+      }
+    },
+    "hyprland_14": {
+      "inputs": {
+        "aquamarine": "aquamarine_14",
+        "hyprcursor": "hyprcursor_14",
+        "hyprgraphics": "hyprgraphics_14",
+        "hyprland-protocols": "hyprland-protocols_14",
+        "hyprland-qtutils": "hyprland-qtutils_14",
+        "hyprlang": "hyprlang_14",
+        "hyprutils": "hyprutils_14",
+        "hyprwayland-scanner": "hyprwayland-scanner_14",
+        "nixpkgs": [
+          "users",
+          "stylixModules",
+          "packages",
+          "nixpkgs-unstable"
+        ],
+        "pre-commit-hooks": "pre-commit-hooks_14",
+        "systems": "systems_17",
+        "xdph": "xdph_14"
       },
       "locked": {
         "lastModified": 1761601798,
@@ -4657,7 +5744,9 @@
         "hyprwayland-scanner": "hyprwayland-scanner_4",
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "nixpkgs-unstable"
         ],
@@ -4692,11 +5781,12 @@
         "hyprwayland-scanner": "hyprwayland-scanner_5",
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_5",
-        "systems": "systems_5",
+        "systems": "systems_6",
         "xdph": "xdph_5"
       },
       "locked": {
@@ -4726,12 +5816,11 @@
         "hyprwayland-scanner": "hyprwayland-scanner_6",
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_6",
-        "systems": "systems_6",
+        "systems": "systems_7",
         "xdph": "xdph_6"
       },
       "locked": {
@@ -4760,10 +5849,8 @@
         "hyprutils": "hyprutils_7",
         "hyprwayland-scanner": "hyprwayland-scanner_7",
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "nixpkgs-unstable"
         ],
@@ -4800,12 +5887,12 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_8",
-        "systems": "systems_9",
+        "systems": "systems_10",
         "xdph": "xdph_8"
       },
       "locked": {
@@ -4837,11 +5924,12 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "nixpkgs-unstable"
         ],
         "pre-commit-hooks": "pre-commit-hooks_9",
-        "systems": "systems_10",
+        "systems": "systems_11",
         "xdph": "xdph_9"
       },
       "locked": {
@@ -4907,6 +5995,91 @@
       "inputs": {
         "hyprutils": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758927902,
+        "narHash": "sha256-LZgMds7M94+vuMql2bERQ6LiFFdhgsEFezE4Vn+Ys3A=",
+        "owner": "hyprwm",
+        "repo": "hyprlang",
+        "rev": "4dafa28d4f79877d67a7d1a654cddccf8ebf15da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprlang",
+        "type": "github"
+      }
+    },
+    "hyprlang_11": {
+      "inputs": {
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758927902,
+        "narHash": "sha256-LZgMds7M94+vuMql2bERQ6LiFFdhgsEFezE4Vn+Ys3A=",
+        "owner": "hyprwm",
+        "repo": "hyprlang",
+        "rev": "4dafa28d4f79877d67a7d1a654cddccf8ebf15da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprlang",
+        "type": "github"
+      }
+    },
+    "hyprlang_12": {
+      "inputs": {
+        "hyprutils": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -4941,7 +6114,7 @@
         "type": "github"
       }
     },
-    "hyprlang_11": {
+    "hyprlang_13": {
       "inputs": {
         "hyprutils": [
           "users",
@@ -4976,7 +6149,7 @@
         "type": "github"
       }
     },
-    "hyprlang_12": {
+    "hyprlang_14": {
       "inputs": {
         "hyprutils": [
           "users",
@@ -5103,21 +6276,27 @@
       "inputs": {
         "hyprutils": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5141,18 +6320,21 @@
       "inputs": {
         "hyprutils": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -5176,21 +6358,18 @@
       "inputs": {
         "hyprutils": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5213,28 +6392,22 @@
     "hyprlang_7": {
       "inputs": {
         "hyprutils": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5260,7 +6433,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -5269,7 +6442,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -5278,7 +6451,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -5304,6 +6477,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -5312,6 +6486,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -5320,6 +6495,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -5343,7 +6519,8 @@
       "inputs": {
         "homeModules": "homeModules",
         "nixosModules": "nixosModules",
-        "packages": "packages_3"
+        "packages": "packages_3",
+        "stylixModules": "stylixModules"
       },
       "locked": {
         "path": "./hyprlazer-desk",
@@ -5362,7 +6539,8 @@
       "inputs": {
         "homeModules": "homeModules_2",
         "nixosModules": "nixosModules_3",
-        "packages": "packages_9"
+        "packages": "packages_10",
+        "stylixModules": "stylixModules_3"
       },
       "locked": {
         "path": "./hyprlazer-desk",
@@ -5416,6 +6594,74 @@
       "inputs": {
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759619523,
+        "narHash": "sha256-r1ed7AR2ZEb2U8gy321/Xcp1ho2tzn+gG1te/Wxsj1A=",
+        "owner": "hyprwm",
+        "repo": "hyprutils",
+        "rev": "3df7bde01efb3a3e8e678d1155f2aa3f19e177ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprutils",
+        "type": "github"
+      }
+    },
+    "hyprutils_11": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1759619523,
+        "narHash": "sha256-r1ed7AR2ZEb2U8gy321/Xcp1ho2tzn+gG1te/Wxsj1A=",
+        "owner": "hyprwm",
+        "repo": "hyprutils",
+        "rev": "3df7bde01efb3a3e8e678d1155f2aa3f19e177ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprutils",
+        "type": "github"
+      }
+    },
+    "hyprutils_12": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -5443,7 +6689,7 @@
         "type": "github"
       }
     },
-    "hyprutils_11": {
+    "hyprutils_13": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -5472,7 +6718,7 @@
         "type": "github"
       }
     },
-    "hyprutils_12": {
+    "hyprutils_14": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -5575,14 +6821,18 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5606,12 +6856,14 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -5635,14 +6887,12 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5665,19 +6915,15 @@
     "hyprutils_7": {
       "inputs": {
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5703,7 +6949,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -5712,7 +6958,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -5738,6 +6984,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -5746,6 +6993,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -5804,6 +7052,74 @@
       "inputs": {
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1755184602,
+        "narHash": "sha256-RCBQN8xuADB0LEgaKbfRqwm6CdyopE1xIEhNc67FAbw=",
+        "owner": "hyprwm",
+        "repo": "hyprwayland-scanner",
+        "rev": "b3b0f1f40ae09d4447c20608e5a4faf8bf3c492d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprwayland-scanner",
+        "type": "github"
+      }
+    },
+    "hyprwayland-scanner_11": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1755184602,
+        "narHash": "sha256-RCBQN8xuADB0LEgaKbfRqwm6CdyopE1xIEhNc67FAbw=",
+        "owner": "hyprwm",
+        "repo": "hyprwayland-scanner",
+        "rev": "b3b0f1f40ae09d4447c20608e5a4faf8bf3c492d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "hyprwayland-scanner",
+        "type": "github"
+      }
+    },
+    "hyprwayland-scanner_12": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -5831,7 +7147,7 @@
         "type": "github"
       }
     },
-    "hyprwayland-scanner_11": {
+    "hyprwayland-scanner_13": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -5860,7 +7176,7 @@
         "type": "github"
       }
     },
-    "hyprwayland-scanner_12": {
+    "hyprwayland-scanner_14": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -5963,14 +7279,18 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -5994,12 +7314,14 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -6023,14 +7345,12 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -6053,19 +7373,15 @@
     "hyprwayland-scanner_7": {
       "inputs": {
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -6091,7 +7407,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -6100,7 +7416,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -6126,6 +7442,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -6134,6 +7451,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -6173,7 +7491,7 @@
     },
     "nixosModules_2": {
       "inputs": {
-        "packages": "packages_4"
+        "packages": "packages_5"
       },
       "locked": {
         "path": "./../modules/nixos",
@@ -6189,7 +7507,7 @@
     },
     "nixosModules_3": {
       "inputs": {
-        "packages": "packages_8"
+        "packages": "packages_9"
       },
       "locked": {
         "path": "../../modules/nixos",
@@ -6270,6 +7588,38 @@
       }
     },
     "nixpkgs-unstable_12": {
+      "locked": {
+        "lastModified": 1765186076,
+        "narHash": "sha256-hM20uyap1a0M9d344I692r+ik4gTMyj60cQWO+hAYP8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "addf7cf5f383a3101ecfba091b98d0a1263dc9b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-unstable_13": {
+      "locked": {
+        "lastModified": 1765186076,
+        "narHash": "sha256-hM20uyap1a0M9d344I692r+ik4gTMyj60cQWO+hAYP8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "addf7cf5f383a3101ecfba091b98d0a1263dc9b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-unstable_14": {
       "locked": {
         "lastModified": 1765186076,
         "narHash": "sha256-hM20uyap1a0M9d344I692r+ik4gTMyj60cQWO+hAYP8=",
@@ -6461,6 +7811,38 @@
         "type": "github"
       }
     },
+    "nixpkgs_13": {
+      "locked": {
+        "lastModified": 1765311797,
+        "narHash": "sha256-mSD5Ob7a+T2RNjvPvOA1dkJHGVrNVl8ZOrAwBjKBDQo=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "09eb77e94fa25202af8f3e81ddc7353d9970ac1b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_14": {
+      "locked": {
+        "lastModified": 1765311797,
+        "narHash": "sha256-mSD5Ob7a+T2RNjvPvOA1dkJHGVrNVl8ZOrAwBjKBDQo=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "09eb77e94fa25202af8f3e81ddc7353d9970ac1b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1765311797,
@@ -6593,6 +7975,39 @@
       "inputs": {
         "flake-parts": [
           "hosts",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "stylix",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "hosts",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "stylix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764773531,
+        "narHash": "sha256-mCBl7MD1WZ7yCG6bR9MmpPO2VydpNkWFgnslJRIT1YU=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "1d9616689e98beded059ad0384b9951e967a17fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
+    "nur_2": {
+      "inputs": {
+        "flake-parts": [
+          "hosts",
           "stylixModules",
           "stylix",
           "flake-parts"
@@ -6618,7 +8033,40 @@
         "type": "github"
       }
     },
-    "nur_2": {
+    "nur_3": {
+      "inputs": {
+        "flake-parts": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "stylix",
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "stylix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764773531,
+        "narHash": "sha256-mCBl7MD1WZ7yCG6bR9MmpPO2VydpNkWFgnslJRIT1YU=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "1d9616689e98beded059ad0384b9951e967a17fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
+    "nur_4": {
       "inputs": {
         "flake-parts": [
           "users",
@@ -6688,7 +8136,8 @@
       },
       "parent": [
         "users",
-        "homeModules"
+        "environments",
+        "hyprlazer-desk"
       ]
     },
     "packages_11": {
@@ -6698,6 +8147,50 @@
         "nixpkgs": "nixpkgs_11",
         "nixpkgs-unstable": "nixpkgs-unstable_11",
         "vieb": "vieb_11"
+      },
+      "locked": {
+        "path": "../../packages",
+        "type": "path"
+      },
+      "original": {
+        "path": "../../packages",
+        "type": "path"
+      },
+      "parent": [
+        "users",
+        "environments",
+        "hyprlazer-desk",
+        "stylixModules"
+      ]
+    },
+    "packages_12": {
+      "inputs": {
+        "copyparty": "copyparty_12",
+        "hyprland": "hyprland_12",
+        "nixpkgs": "nixpkgs_12",
+        "nixpkgs-unstable": "nixpkgs-unstable_12",
+        "vieb": "vieb_12"
+      },
+      "locked": {
+        "path": "../../packages",
+        "type": "path"
+      },
+      "original": {
+        "path": "../../packages",
+        "type": "path"
+      },
+      "parent": [
+        "users",
+        "homeModules"
+      ]
+    },
+    "packages_13": {
+      "inputs": {
+        "copyparty": "copyparty_13",
+        "hyprland": "hyprland_13",
+        "nixpkgs": "nixpkgs_13",
+        "nixpkgs-unstable": "nixpkgs-unstable_13",
+        "vieb": "vieb_13"
       },
       "locked": {
         "path": "./../packages",
@@ -6711,13 +8204,13 @@
         "users"
       ]
     },
-    "packages_12": {
+    "packages_14": {
       "inputs": {
-        "copyparty": "copyparty_12",
-        "hyprland": "hyprland_12",
-        "nixpkgs": "nixpkgs_12",
-        "nixpkgs-unstable": "nixpkgs-unstable_12",
-        "vieb": "vieb_12"
+        "copyparty": "copyparty_14",
+        "hyprland": "hyprland_14",
+        "nixpkgs": "nixpkgs_14",
+        "nixpkgs-unstable": "nixpkgs-unstable_14",
+        "vieb": "vieb_14"
       },
       "locked": {
         "path": "../../packages",
@@ -6795,7 +8288,9 @@
       },
       "parent": [
         "hosts",
-        "nixosModules"
+        "environments",
+        "hyprlazer-desk",
+        "stylixModules"
       ]
     },
     "packages_5": {
@@ -6807,15 +8302,16 @@
         "vieb": "vieb_5"
       },
       "locked": {
-        "path": "./../packages",
+        "path": "../../packages",
         "type": "path"
       },
       "original": {
-        "path": "./../packages",
+        "path": "../../packages",
         "type": "path"
       },
       "parent": [
-        "hosts"
+        "hosts",
+        "nixosModules"
       ]
     },
     "packages_6": {
@@ -6827,16 +8323,15 @@
         "vieb": "vieb_6"
       },
       "locked": {
-        "path": "../../packages",
+        "path": "./../packages",
         "type": "path"
       },
       "original": {
-        "path": "../../packages",
+        "path": "./../packages",
         "type": "path"
       },
       "parent": [
-        "hosts",
-        "stylixModules"
+        "hosts"
       ]
     },
     "packages_7": {
@@ -6856,10 +8351,8 @@
         "type": "path"
       },
       "parent": [
-        "users",
-        "environments",
-        "hyprlazer-desk",
-        "homeModules"
+        "hosts",
+        "stylixModules"
       ]
     },
     "packages_8": {
@@ -6882,7 +8375,7 @@
         "users",
         "environments",
         "hyprlazer-desk",
-        "nixosModules"
+        "homeModules"
       ]
     },
     "packages_9": {
@@ -6904,7 +8397,8 @@
       "parent": [
         "users",
         "environments",
-        "hyprlazer-desk"
+        "hyprlazer-desk",
+        "nixosModules"
       ]
     },
     "pre-commit-hooks": {
@@ -6941,7 +8435,8 @@
         "gitignore": "gitignore_10",
         "nixpkgs": [
           "users",
-          "homeModules",
+          "environments",
+          "hyprlazer-desk",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -6967,6 +8462,9 @@
         "gitignore": "gitignore_11",
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -6990,6 +8488,57 @@
       "inputs": {
         "flake-compat": "flake-compat_12",
         "gitignore": "gitignore_12",
+        "nixpkgs": [
+          "users",
+          "homeModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760663237,
+        "narHash": "sha256-BflA6U4AM1bzuRMR8QqzPXqh8sWVCNDzOdsxXEguJIc=",
+        "owner": "cachix",
+        "repo": "git-hooks.nix",
+        "rev": "ca5b894d3e3e151ffc1db040b6ce4dcc75d31c37",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cachix",
+        "repo": "git-hooks.nix",
+        "type": "github"
+      }
+    },
+    "pre-commit-hooks_13": {
+      "inputs": {
+        "flake-compat": "flake-compat_13",
+        "gitignore": "gitignore_13",
+        "nixpkgs": [
+          "users",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760663237,
+        "narHash": "sha256-BflA6U4AM1bzuRMR8QqzPXqh8sWVCNDzOdsxXEguJIc=",
+        "owner": "cachix",
+        "repo": "git-hooks.nix",
+        "rev": "ca5b894d3e3e151ffc1db040b6ce4dcc75d31c37",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cachix",
+        "repo": "git-hooks.nix",
+        "type": "github"
+      }
+    },
+    "pre-commit-hooks_14": {
+      "inputs": {
+        "flake-compat": "flake-compat_14",
+        "gitignore": "gitignore_14",
         "nixpkgs": [
           "users",
           "stylixModules",
@@ -7073,7 +8622,9 @@
         "gitignore": "gitignore_4",
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -7099,6 +8650,7 @@
         "gitignore": "gitignore_5",
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -7124,7 +8676,6 @@
         "gitignore": "gitignore_6",
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -7149,10 +8700,8 @@
         "flake-compat": "flake-compat_7",
         "gitignore": "gitignore_7",
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -7180,7 +8729,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -7208,6 +8757,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -7317,12 +8867,14 @@
         "gnome-shell": "gnome-shell",
         "nixpkgs": [
           "hosts",
+          "environments",
+          "hyprlazer-desk",
           "stylixModules",
           "packages",
           "nixpkgs"
         ],
         "nur": "nur",
-        "systems": "systems_7",
+        "systems": "systems_5",
         "tinted-foot": "tinted-foot",
         "tinted-kitty": "tinted-kitty",
         "tinted-schemes": "tinted-schemes",
@@ -7346,8 +8898,27 @@
     },
     "stylixModules": {
       "inputs": {
-        "packages": "packages_6",
+        "packages": "packages_4",
         "stylix": "stylix"
+      },
+      "locked": {
+        "path": "../../modules/stylix",
+        "type": "path"
+      },
+      "original": {
+        "path": "../../modules/stylix",
+        "type": "path"
+      },
+      "parent": [
+        "hosts",
+        "environments",
+        "hyprlazer-desk"
+      ]
+    },
+    "stylixModules_2": {
+      "inputs": {
+        "packages": "packages_7",
+        "stylix": "stylix_2"
       },
       "locked": {
         "path": "./../modules/stylix",
@@ -7361,10 +8932,29 @@
         "hosts"
       ]
     },
-    "stylixModules_2": {
+    "stylixModules_3": {
       "inputs": {
-        "packages": "packages_12",
-        "stylix": "stylix_2"
+        "packages": "packages_11",
+        "stylix": "stylix_3"
+      },
+      "locked": {
+        "path": "../../modules/stylix",
+        "type": "path"
+      },
+      "original": {
+        "path": "../../modules/stylix",
+        "type": "path"
+      },
+      "parent": [
+        "users",
+        "environments",
+        "hyprlazer-desk"
+      ]
+    },
+    "stylixModules_4": {
+      "inputs": {
+        "packages": "packages_14",
+        "stylix": "stylix_4"
       },
       "locked": {
         "path": "./../modules/stylix",
@@ -7388,18 +8978,96 @@
         "flake-parts": "flake-parts_2",
         "gnome-shell": "gnome-shell_2",
         "nixpkgs": [
-          "users",
+          "hosts",
           "stylixModules",
           "packages",
           "nixpkgs"
         ],
         "nur": "nur_2",
-        "systems": "systems_14",
+        "systems": "systems_9",
         "tinted-foot": "tinted-foot_2",
         "tinted-kitty": "tinted-kitty_2",
         "tinted-schemes": "tinted-schemes_2",
         "tinted-tmux": "tinted-tmux_2",
         "tinted-zed": "tinted-zed_2"
+      },
+      "locked": {
+        "lastModified": 1765478257,
+        "narHash": "sha256-GMCAQgs+h4aHhLP3LF6JxI5uNg+fLPlRhHwRrJJ+3+Y=",
+        "owner": "nix-community",
+        "repo": "stylix",
+        "rev": "a7fb3944d1fb4daa073ba82e1a9d34b5f05adb9f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-25.11",
+        "repo": "stylix",
+        "type": "github"
+      }
+    },
+    "stylix_3": {
+      "inputs": {
+        "base16": "base16_3",
+        "base16-fish": "base16-fish_3",
+        "base16-helix": "base16-helix_3",
+        "base16-vim": "base16-vim_3",
+        "firefox-gnome-theme": "firefox-gnome-theme_3",
+        "flake-parts": "flake-parts_3",
+        "gnome-shell": "gnome-shell_3",
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "nixpkgs"
+        ],
+        "nur": "nur_3",
+        "systems": "systems_14",
+        "tinted-foot": "tinted-foot_3",
+        "tinted-kitty": "tinted-kitty_3",
+        "tinted-schemes": "tinted-schemes_3",
+        "tinted-tmux": "tinted-tmux_3",
+        "tinted-zed": "tinted-zed_3"
+      },
+      "locked": {
+        "lastModified": 1765478257,
+        "narHash": "sha256-GMCAQgs+h4aHhLP3LF6JxI5uNg+fLPlRhHwRrJJ+3+Y=",
+        "owner": "nix-community",
+        "repo": "stylix",
+        "rev": "a7fb3944d1fb4daa073ba82e1a9d34b5f05adb9f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-25.11",
+        "repo": "stylix",
+        "type": "github"
+      }
+    },
+    "stylix_4": {
+      "inputs": {
+        "base16": "base16_4",
+        "base16-fish": "base16-fish_4",
+        "base16-helix": "base16-helix_4",
+        "base16-vim": "base16-vim_4",
+        "firefox-gnome-theme": "firefox-gnome-theme_4",
+        "flake-parts": "flake-parts_4",
+        "gnome-shell": "gnome-shell_4",
+        "nixpkgs": [
+          "users",
+          "stylixModules",
+          "packages",
+          "nixpkgs"
+        ],
+        "nur": "nur_4",
+        "systems": "systems_18",
+        "tinted-foot": "tinted-foot_4",
+        "tinted-kitty": "tinted-kitty_4",
+        "tinted-schemes": "tinted-schemes_4",
+        "tinted-tmux": "tinted-tmux_4",
+        "tinted-zed": "tinted-zed_4"
       },
       "locked": {
         "lastModified": 1765478257,
@@ -7506,6 +9174,66 @@
         "type": "github"
       }
     },
+    "systems_15": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "systems_16": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "systems_17": {
+      "locked": {
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default-linux",
+        "type": "github"
+      }
+    },
+    "systems_18": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "systems_2": {
       "locked": {
         "lastModified": 1689347949,
@@ -7553,16 +9281,16 @@
     },
     "systems_5": {
       "locked": {
-        "lastModified": 1689347949,
-        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
         "owner": "nix-systems",
-        "repo": "default-linux",
-        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
         "type": "github"
       },
       "original": {
         "owner": "nix-systems",
-        "repo": "default-linux",
+        "repo": "default",
         "type": "github"
       }
     },
@@ -7583,16 +9311,16 @@
     },
     "systems_7": {
       "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "lastModified": 1689347949,
+        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
         "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "repo": "default-linux",
+        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
         "type": "github"
       },
       "original": {
         "owner": "nix-systems",
-        "repo": "default",
+        "repo": "default-linux",
         "type": "github"
       }
     },
@@ -7613,16 +9341,16 @@
     },
     "systems_9": {
       "locked": {
-        "lastModified": 1689347949,
-        "narHash": "sha256-12tWmuL2zgBgZkdoB6qXZsgJEH9LR3oUgpaQq2RbI80=",
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
         "owner": "nix-systems",
-        "repo": "default-linux",
-        "rev": "31732fcf5e8fea42e59c2488ad31a0e651500f68",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
         "type": "github"
       },
       "original": {
         "owner": "nix-systems",
-        "repo": "default-linux",
+        "repo": "default",
         "type": "github"
       }
     },
@@ -7644,6 +9372,40 @@
       }
     },
     "tinted-foot_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726913040,
+        "narHash": "sha256-+eDZPkw7efMNUf3/Pv0EmsidqdwNJ1TaOum6k7lngDQ=",
+        "owner": "tinted-theming",
+        "repo": "tinted-foot",
+        "rev": "fd1b924b6c45c3e4465e8a849e67ea82933fcbe4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "tinted-foot",
+        "rev": "fd1b924b6c45c3e4465e8a849e67ea82933fcbe4",
+        "type": "github"
+      }
+    },
+    "tinted-foot_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1726913040,
+        "narHash": "sha256-+eDZPkw7efMNUf3/Pv0EmsidqdwNJ1TaOum6k7lngDQ=",
+        "owner": "tinted-theming",
+        "repo": "tinted-foot",
+        "rev": "fd1b924b6c45c3e4465e8a849e67ea82933fcbe4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "tinted-foot",
+        "rev": "fd1b924b6c45c3e4465e8a849e67ea82933fcbe4",
+        "type": "github"
+      }
+    },
+    "tinted-foot_4": {
       "flake": false,
       "locked": {
         "lastModified": 1726913040,
@@ -7692,6 +9454,38 @@
         "type": "github"
       }
     },
+    "tinted-kitty_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1735730497,
+        "narHash": "sha256-4KtB+FiUzIeK/4aHCKce3V9HwRvYaxX+F1edUrfgzb8=",
+        "owner": "tinted-theming",
+        "repo": "tinted-kitty",
+        "rev": "de6f888497f2c6b2279361bfc790f164bfd0f3fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "tinted-kitty",
+        "type": "github"
+      }
+    },
+    "tinted-kitty_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1735730497,
+        "narHash": "sha256-4KtB+FiUzIeK/4aHCKce3V9HwRvYaxX+F1edUrfgzb8=",
+        "owner": "tinted-theming",
+        "repo": "tinted-kitty",
+        "rev": "de6f888497f2c6b2279361bfc790f164bfd0f3fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "tinted-kitty",
+        "type": "github"
+      }
+    },
     "tinted-schemes": {
       "flake": false,
       "locked": {
@@ -7709,6 +9503,38 @@
       }
     },
     "tinted-schemes_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1763914658,
+        "narHash": "sha256-Hju0WtMf3iForxtOwXqGp3Ynipo0EYx1AqMKLPp9BJw=",
+        "owner": "tinted-theming",
+        "repo": "schemes",
+        "rev": "0f6be815d258e435c9b137befe5ef4ff24bea32c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "schemes",
+        "type": "github"
+      }
+    },
+    "tinted-schemes_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1763914658,
+        "narHash": "sha256-Hju0WtMf3iForxtOwXqGp3Ynipo0EYx1AqMKLPp9BJw=",
+        "owner": "tinted-theming",
+        "repo": "schemes",
+        "rev": "0f6be815d258e435c9b137befe5ef4ff24bea32c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "schemes",
+        "type": "github"
+      }
+    },
+    "tinted-schemes_4": {
       "flake": false,
       "locked": {
         "lastModified": 1763914658,
@@ -7756,6 +9582,38 @@
         "type": "github"
       }
     },
+    "tinted-tmux_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764465359,
+        "narHash": "sha256-lbSVPqLEk2SqMrnpvWuKYGCaAlfWFMA6MVmcOFJjdjE=",
+        "owner": "tinted-theming",
+        "repo": "tinted-tmux",
+        "rev": "edf89a780e239263cc691a987721f786ddc4f6aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "tinted-tmux",
+        "type": "github"
+      }
+    },
+    "tinted-tmux_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764465359,
+        "narHash": "sha256-lbSVPqLEk2SqMrnpvWuKYGCaAlfWFMA6MVmcOFJjdjE=",
+        "owner": "tinted-theming",
+        "repo": "tinted-tmux",
+        "rev": "edf89a780e239263cc691a987721f786ddc4f6aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "tinted-tmux",
+        "type": "github"
+      }
+    },
     "tinted-zed": {
       "flake": false,
       "locked": {
@@ -7788,13 +9646,45 @@
         "type": "github"
       }
     },
+    "tinted-zed_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764464512,
+        "narHash": "sha256-rCD/pAhkMdCx6blsFwxIyvBJbPZZ1oL2sVFrH07lmqg=",
+        "owner": "tinted-theming",
+        "repo": "base16-zed",
+        "rev": "907dbba5fb8cf69ebfd90b00813418a412d0a29a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "tinted-zed_4": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764464512,
+        "narHash": "sha256-rCD/pAhkMdCx6blsFwxIyvBJbPZZ1oL2sVFrH07lmqg=",
+        "owner": "tinted-theming",
+        "repo": "base16-zed",
+        "rev": "907dbba5fb8cf69ebfd90b00813418a412d0a29a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tinted-theming",
+        "repo": "base16-zed",
+        "type": "github"
+      }
+    },
     "users": {
       "inputs": {
         "environments": "environments_2",
         "home-manager": "home-manager",
         "homeModules": "homeModules_3",
-        "packages": "packages_11",
-        "stylixModules": "stylixModules_2"
+        "packages": "packages_13",
+        "stylixModules": "stylixModules_4"
       },
       "locked": {
         "path": "./users",
@@ -7835,7 +9725,8 @@
       "inputs": {
         "nixpkgs": [
           "users",
-          "homeModules",
+          "environments",
+          "hyprlazer-desk",
           "packages",
           "nixpkgs"
         ]
@@ -7858,6 +9749,9 @@
       "inputs": {
         "nixpkgs": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -7877,6 +9771,51 @@
       }
     },
     "vieb_12": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "homeModules",
+          "packages",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762232636,
+        "narHash": "sha256-xlkbo19xdmorjrzzoUq8//D1ilnK/0JhElEP5Juw368=",
+        "owner": "tejing1",
+        "repo": "vieb-nix",
+        "rev": "250d7245c51465395d35271cffa771a3b23b1137",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tejing1",
+        "repo": "vieb-nix",
+        "type": "github"
+      }
+    },
+    "vieb_13": {
+      "inputs": {
+        "nixpkgs": [
+          "users",
+          "packages",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762232636,
+        "narHash": "sha256-xlkbo19xdmorjrzzoUq8//D1ilnK/0JhElEP5Juw368=",
+        "owner": "tejing1",
+        "repo": "vieb-nix",
+        "rev": "250d7245c51465395d35271cffa771a3b23b1137",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tejing1",
+        "repo": "vieb-nix",
+        "type": "github"
+      }
+    },
+    "vieb_14": {
       "inputs": {
         "nixpkgs": [
           "users",
@@ -7952,7 +9891,9 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -7975,6 +9916,7 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "nixpkgs"
         ]
@@ -7997,7 +9939,6 @@
       "inputs": {
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -8019,10 +9960,8 @@
     "vieb_7": {
       "inputs": {
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "nixpkgs"
         ]
@@ -8047,7 +9986,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "nixpkgs"
         ]
@@ -8072,6 +10011,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "nixpkgs"
         ]
@@ -8165,6 +10105,142 @@
       "inputs": {
         "hyprland-protocols": [
           "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprland-protocols"
+        ],
+        "hyprlang": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprlang"
+        ],
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "hyprwayland-scanner": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "hyprwayland-scanner"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760713634,
+        "narHash": "sha256-5HXelmz2x/uO26lvW7MudnadbAfoBnve4tRBiDVLtOM=",
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "rev": "753bbbdf6a052994da94062e5b753288cef28dfb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "xdph_11": {
+      "inputs": {
+        "hyprland-protocols": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprland-protocols"
+        ],
+        "hyprlang": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprlang"
+        ],
+        "hyprutils": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprutils"
+        ],
+        "hyprwayland-scanner": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "hyprwayland-scanner"
+        ],
+        "nixpkgs": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "nixpkgs"
+        ],
+        "systems": [
+          "users",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
+          "packages",
+          "hyprland",
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760713634,
+        "narHash": "sha256-5HXelmz2x/uO26lvW7MudnadbAfoBnve4tRBiDVLtOM=",
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "rev": "753bbbdf6a052994da94062e5b753288cef28dfb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "xdph_12": {
+      "inputs": {
+        "hyprland-protocols": [
+          "users",
           "homeModules",
           "packages",
           "hyprland",
@@ -8220,7 +10296,7 @@
         "type": "github"
       }
     },
-    "xdph_11": {
+    "xdph_13": {
       "inputs": {
         "hyprland-protocols": [
           "users",
@@ -8273,7 +10349,7 @@
         "type": "github"
       }
     },
-    "xdph_12": {
+    "xdph_14": {
       "inputs": {
         "hyprland-protocols": [
           "users",
@@ -8472,42 +10548,54 @@
       "inputs": {
         "hyprland-protocols": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "nixosModules",
+          "environments",
+          "hyprlazer-desk",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -8531,36 +10619,42 @@
       "inputs": {
         "hyprland-protocols": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"
@@ -8584,42 +10678,36 @@
       "inputs": {
         "hyprland-protocols": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
           "hosts",
-          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -8642,55 +10730,43 @@
     "xdph_7": {
       "inputs": {
         "hyprland-protocols": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprland-protocols"
         ],
         "hyprlang": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprlang"
         ],
         "hyprutils": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprutils"
         ],
         "hyprwayland-scanner": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
         ],
         "nixpkgs": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "nixpkgs"
         ],
         "systems": [
-          "users",
-          "environments",
-          "hyprlazer-desk",
-          "homeModules",
+          "hosts",
+          "stylixModules",
           "packages",
           "hyprland",
           "systems"
@@ -8716,7 +10792,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprland-protocols"
@@ -8725,7 +10801,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprlang"
@@ -8734,7 +10810,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -8743,7 +10819,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
@@ -8752,7 +10828,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -8761,7 +10837,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
-          "nixosModules",
+          "homeModules",
           "packages",
           "hyprland",
           "systems"
@@ -8787,6 +10863,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprland-protocols"
@@ -8795,6 +10872,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprlang"
@@ -8803,6 +10881,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprutils"
@@ -8811,6 +10890,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "hyprwayland-scanner"
@@ -8819,6 +10899,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "nixpkgs"
@@ -8827,6 +10908,7 @@
           "users",
           "environments",
           "hyprlazer-desk",
+          "nixosModules",
           "packages",
           "hyprland",
           "systems"

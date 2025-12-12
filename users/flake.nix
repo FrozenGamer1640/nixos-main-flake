@@ -41,7 +41,6 @@
       importUser = userName: [
         ./${userName}.nix
         homeModules.homeModules.default
-        stylixModules.stylixModules.home
         { home.username = "${userName}"; }
       ];
     in

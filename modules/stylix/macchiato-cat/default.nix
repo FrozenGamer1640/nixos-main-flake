@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   config,
   ...
 }:
@@ -10,7 +11,10 @@ let
   };
 in
 {
-  stylix = {
+  options.stylix = {
+    targets.starship.enable = lib.mkEnableOption "starship target"; # Not going to ask why this is not implemented but inlcuded in autoEnable
+  };
+  config.stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     polarity = "dark";

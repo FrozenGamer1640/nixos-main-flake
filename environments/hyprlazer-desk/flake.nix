@@ -14,26 +14,35 @@
       type = "path";
       path = "../../modules/home";
     };
+    stylixModules = {
+      type = "path";
+      path = "../../modules/stylix";
+    };
   };
 
   outputs =
-    {
+    inputs@{
       packages,
-      nixosModules,
-      homeModules,
       ...
     }:
+    let
+      inherit (inputs.nixosModules) nixosModules;
+      inherit (inputs.homeModules) homeModules;
+      inherit (inputs.stylixModules) stylixModules;
+    in
     {
       nixosModules.default = {
-        imports = with nixosModules.nixosModules; [
+        imports = with nixosModules; [
           ./nixos
           starship.frosted-kebab
+          stylixModules.nixos
         ];
       };
       homeModules.default = {
-        imports = with homeModules.homeModules; [
+        imports = with homeModules; [
           ./home
           osu-resources
+          stylixModules.home
         ];
       };
     };
