@@ -2,6 +2,7 @@ import Quickshell // for PanelWindow
 import Quickshell.Io
 import QtQuick // for Text
 
+
 PanelWindow {
   anchors {
     top: true
@@ -11,26 +12,12 @@ PanelWindow {
 
   implicitHeight: 30
 
-  Text {
+  SystemClock {
     id: clock
+  }
+
+  Text {
     anchors.centerIn: parent
-
-    Process {
-      id: dateProc
-
-      command: ["date"]
-      running: true
-
-      stdout: StdioCollector {
-        onStreamFinished: clock.text = this.text
-      }
-    }
-
-    Timer {
-      interval: 1000
-      running: true
-      repeat: true
-      onTriggered: dateProc.running = true
-    }
+    text: Qt.formatDateTime(clock.date, "hh:mm:ss ap - yyyy/MM/dd")
   }
 }
