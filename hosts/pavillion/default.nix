@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   ...
 }:
 {
@@ -47,10 +48,53 @@
     bluetooth.enable = false;
     graphics.enable = true;
   };
-
-  fileSystems."/mnt/Xtra" = {
-    device = "/dev/disk/by-uuid/b43e0502-b5ed-4498-b491-c66fa78bddfe";
-    fsType = "btrfs";
-    options = [ "nofail" ];
+  fileSystems = {
+    "/".options = [
+      "compress=lzo"
+    ];
+    "/mnt/self" = {
+      inherit (config.fileSystems."/") device fsType;
+      depends = [
+        "/"
+        "/home"
+        "/mnt/mclauncher"
+      ];
+      options = [
+        "bind"
+      ];
+    };
+    "/home" = {
+      inherit (config.fileSystems."/") device fsType;
+      options = [
+        "compress=lzo"
+        "subvol=@home"
+      ];
+    };
+    "/mnt/mclauncher" = {
+      inherit (config.fileSystems."/") device fsType;
+      options = [
+        "compress=lzo"
+        "subvol=mclauncher"
+      ];
+    };
+    "/mnt/ssdsata" = {
+      device = "/dev/disk/by-uuid/b43e0502-b5ed-4498-b491-c66fa78bddfe";
+      fsType = "btrfs";
+      options = [ "nofail" ];
+    };
+    "mnt/copyparty" = {
+      inherit (config.fileSystems."/mnt/ssdsata") device fsType;
+      options = [
+        "compress=lzo"
+        "subvol=copyparty"
+      ];
+    };
+    "mnt/steam" = {
+      inherit (config.fileSystems."/mnt/ssdsata") device fsType;
+      options = [
+        "compress=lzo"
+        "subvol=steam"
+      ];
+    };
   };
 }
