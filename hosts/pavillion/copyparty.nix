@@ -4,6 +4,7 @@
 }:
 {
   environment.systemPackages = [ pkgs.copyparty ];
+  services.netbird.enable = true;
   services.copyparty = {
     enable = true;
     user = "copyparty";
@@ -21,14 +22,12 @@
     # };
 
     accounts = {
-      ed.passwordFile = "/run/keys/copyparty/ed_password";
-      k.passwordFile = "/run/keys/copyparty/k_password";
+      frozenfox.passwordFile = "/mnt/keys/copyparty/frozenfox_password";
     };
 
     groups = {
-      g1 = [
-        "ed"
-        "k"
+      root = [
+        "frozenfox"
       ];
     };
 
@@ -39,8 +38,7 @@
         access = {
           r = "*";
           rw = [
-            "ed"
-            "k"
+            "frozenfox"
           ];
         };
         # see `copyparty --help-flags` for available options

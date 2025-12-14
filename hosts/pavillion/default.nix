@@ -5,7 +5,6 @@
 }:
 {
   imports = [
-    ./nextcloud.nix
     ./copyparty.nix
   ];
 
