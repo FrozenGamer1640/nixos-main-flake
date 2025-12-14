@@ -52,24 +52,6 @@
     "/".options = [
       "compress=lzo"
     ];
-    "/mnt/self" = {
-      inherit (config.fileSystems."/") device fsType;
-      depends = [
-        "/"
-        "/home"
-        "/mnt/mclauncher"
-      ];
-      options = [
-        "bind"
-      ];
-    };
-    "/home" = {
-      inherit (config.fileSystems."/") device fsType;
-      options = [
-        "compress=lzo"
-        "subvol=@home"
-      ];
-    };
     "/mnt/mclauncher" = {
       inherit (config.fileSystems."/") device fsType;
       options = [
