@@ -59,6 +59,13 @@
         "subvol=mclauncher"
       ];
     };
+    "/mnt/keys" = {
+      inherit (config.fileSystems."/") device fsType;
+      options = [
+        "compress=lzo"
+        "subvol=keys"
+      ];
+    };
     "/mnt/ssdsata" = {
       device = "/dev/disk/by-uuid/b43e0502-b5ed-4498-b491-c66fa78bddfe";
       fsType = "btrfs";
