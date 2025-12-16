@@ -20,9 +20,17 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfig = builtins.readFile ./hyprland.conf;
     systemd.enable = true;
     xwayland.enable = true;
+    extraConfig = builtins.readFile ./hyprland.conf;
+    submaps = {
+      "Screenshot".settings = {
+        bind = [
+          ", PRINT, exec, hyprshot -m region -z --clipboard-only ; hyprctl dispatch submap reset"
+          ", escape, submap, reset"
+        ];
+      };
+    };
     settings = {
       general = lib.mkForce {
         "col.inactive_border" = "rgb(${palette.base00})";
