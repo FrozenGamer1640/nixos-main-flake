@@ -59,6 +59,7 @@
               dunst
               zsh
               seanime
+              hyprsunset
             ]);
         };
       };
