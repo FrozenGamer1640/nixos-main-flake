@@ -24,5 +24,6 @@
     winetricks
     osu-lazer-bin
     prismlauncher
+    gh
   ];
 }
