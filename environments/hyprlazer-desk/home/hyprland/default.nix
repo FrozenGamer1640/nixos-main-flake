@@ -8,6 +8,10 @@ let
   palette = config.lib.stylix.colors;
 in
 {
+  imports = [
+    ./binds.nix
+  ];
+
   services = {
     hypridle.enable = true;
     hyprpaper.enable = true;
@@ -32,6 +36,8 @@ in
       };
     };
     settings = {
+      "$terminal" = "kitty";
+
       general = lib.mkForce {
         "col.inactive_border" = "rgb(${palette.base00})";
         "col.active_border" = "rgb(${palette.base04})";
