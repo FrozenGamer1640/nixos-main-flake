@@ -56,7 +56,7 @@ in
 
       (lib.genList (i: "SUPER SHIFT, ${toString (i + 1)}, movetoworkspace, ${toString (i + 1)}") 9)
 
-      (lib.zipListsWith (a: b: "SUPER ALT, ${toString a}, togglespecialworkspace, ${b}")
+      (lib.zipListsWith (a: b: "SUPER ALT, ${toString (a + 1)}, togglespecialworkspace, ${b}")
         (lib.genList (x: x) 2)
         [
           "social"
@@ -64,8 +64,8 @@ in
         ]
       )
 
-      (lib.zipListsWith (a: b: "SUPER SHIFT&ALT, ${toString a}, movetoworkspace, special:${b}")
-        (lib.genList (x: x + 1) 2)
+      (lib.zipListsWith (a: b: "SUPER SHIFT&ALT, ${toString (a + 1)}, movetoworkspace, special:${b}")
+        (lib.genList (x: x) 2)
         [
           "social"
           "quickAccess"
