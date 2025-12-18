@@ -8,7 +8,10 @@
     installRemoteServer = true;
     mutableUserSettings = true;
     extraPackages = with pkgs; [
-      discord-presence-lsp
+      zed-discord-presence
+      zed-color-highlight
+      nixd
+      nil
     ];
     extensions = [
       "nix"

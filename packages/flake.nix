@@ -69,7 +69,7 @@
         copyparty = inputs.copyparty.overlays.default;
         default = final: prev: {
           osu-resources = final.callPackage ./osu-resources.nix { };
-          discord-presence-lsp = final.callPackage ./discord-presence-lsp.nix { };
+          zed-color-highlight = final.callPackage ./zed-color-lsp.nix { };
           vieb = (inputs.vieb.packagesFunc final).vieb;
         };
       };
