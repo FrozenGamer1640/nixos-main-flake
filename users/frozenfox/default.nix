@@ -26,4 +26,10 @@
     prismlauncher
     gh
   ];
+
+  programs.zsh.shellAliases = {
+    nixos-rsrf = "sudo nixos-rebuild switch --no-write-lock-file --flake ~/mysystem/#pavillion";
+    nixos-rbrf = "sudo nixos-rebuild boot --no-write-lock-file --flake ~/mysystem/#pavillion";
+    home-srf = "home-manager switch --no-write-lock-file --flake ~/mysystem/#frozenfox";
+  };
 }
