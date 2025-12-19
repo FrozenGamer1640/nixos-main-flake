@@ -25,6 +25,7 @@
     osu-lazer-bin
     prismlauncher
     gh
+    hyprpicker
   ];
 
   programs.zsh.shellAliases = {

@@ -52,7 +52,7 @@
             (importUser "frozenfox")
             ++ (with homeModules.homeModules; [
               packages.withAllOverlays
-              stylixModules.stylixModules.macchiato-cat
+              stylixModules.stylixModules.silly-kityo
               environments.hyprlazer-desk.homeModules.default
               git
               xdg

@@ -25,6 +25,7 @@
       stylixModules =
         (packages.nixpkgs.lib.genAttrs [
           "macchiato-cat"
+          "silly-kityo"
         ] (moduleName: ./${moduleName}))
         // {
           nixos = stylix.nixosModules.stylix;

@@ -1,4 +1,8 @@
 {
+  pkgs,
+  ...
+}:
+{
   imports = [
     ./hyprland
     ./quickshell
@@ -20,5 +24,11 @@
     btop.enable = true;
     fastfetch.enable = true;
     osu-resources.enable = true; # Part of a local module
+    vim = {
+      enable = true;
+      plugins = with pkgs; [
+        vimPlugins.colorizer
+      ];
+    };
   };
 }

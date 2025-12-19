@@ -45,7 +45,7 @@
             (importHost "pavillion")
             ++ (with nixosModules.nixosModules; [
               packages.withAllOverlays
-              stylixModules.stylixModules.macchiato-cat
+              stylixModules.stylixModules.silly-kityo
               environments.hyprlazer-desk.nixosModules.default
               copyparty
               fonts
