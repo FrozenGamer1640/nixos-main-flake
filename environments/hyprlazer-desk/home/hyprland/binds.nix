@@ -45,13 +45,6 @@ in
 
       (lib.zipListsWith (a: b: "SUPER SHIFT, ${a}, movewindow, ${b}") vimDirectionsKeys vimDirections)
 
-      (lib.zipListsWith (a: b: "SUPER CTRL, ${a}, resizeactive, ${b}") vimDirectionsKeys [
-        "-20 0"
-        "0 20"
-        "0 -20"
-        "20 0"
-      ])
-
       (lib.genList (i: "SUPER, ${toString (i + 1)}, workspace, ${toString (i + 1)}") 9)
 
       (lib.genList (i: "SUPER SHIFT, ${toString (i + 1)}, movetoworkspace, ${toString (i + 1)}") 9)
@@ -81,6 +74,13 @@ in
     ];
 
     bindel = lib.concatLists [
+      (lib.zipListsWith (a: b: "SUPER CTRL, ${a}, resizeactive, ${b}") vimDirectionsKeys [
+        "-10 0"
+        "0 10"
+        "0 -10"
+        "10 0"
+      ])
+
       (lib.zipListsWith (a: b: ",XF86Audio${a}Volume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%${b}")
         [
           "Raise"
