@@ -9,6 +9,7 @@
     ./kitty
     ./vesktop
     ./zed-editor
+    ./neovim
   ];
 
   services = {
@@ -24,11 +25,5 @@
     btop.enable = true;
     fastfetch.enable = true;
     osu-resources.enable = true; # Part of a local module
-    vim = {
-      enable = true;
-      plugins = with pkgs; [
-        vimPlugins.colorizer
-      ];
-    };
   };
 }

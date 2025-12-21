@@ -43,7 +43,7 @@
       enable = true;
       openFirewall = true;
     };
-    vim = {
+    neovim = {
       enable = true;
       defaultEditor = true;
     };
