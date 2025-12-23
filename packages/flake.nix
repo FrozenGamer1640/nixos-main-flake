@@ -14,6 +14,20 @@
       repo = "nixpkgs";
       ref = "nixos-unstable";
     };
+    home-manager = {
+      type = "github";
+      owner = "nix-community";
+      repo = "home-manager";
+      ref = "release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    stylix = {
+      type = "github";
+      owner = "nix-community";
+      repo = "stylix";
+      ref = "release-25.11";
+      inputs.nixpkgs.follows = "packages/nixpkgs";
+    };
     hyprland = {
       type = "github";
       owner = "hyprwm";
@@ -33,6 +47,12 @@
       repo = "copyparty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    seanime = {
+      type = "github";
+      owner = "rishabh5321";
+      repo = "seanime-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -44,6 +64,7 @@
     }:
     {
       inherit nixpkgs nixpkgs-unstable;
+      inherit (inputs) home-manager stylix;
 
       # Add all the systems your flake will support
       systems = [
@@ -75,7 +96,18 @@
       };
 
       nixosModules = {
+	inherit (inputs.stylix.nixosModules) stylix;
         copyparty = inputs.copyparty.nixosModules.default;
-      };
+      }
+      // (import ../modules/nixos self.nixpkgs.lib);
+
+      homeModules = {
+	inherit (inputs.stylix.homeModules) stylix;
+        seanime = inputs.seanime.nixosModules.default;
+      }
+      // (import ../modules/home self.nixpkgs.lib);
+
+      stylixModules = (import ../modules/stylix self.nixpkgs.lib);
     };
 }
+

@@ -1,67 +1,31 @@
+fuyupkgs: environments:
+let
+  inherit (fuyupkgs) withSystem;
+  homeConfiguration = fuyupkgs.home-manager.lib.homeManagerConfiguration;
+  importUser = userName: [
+    ./${userName}
+    fuyupkgs.homeModules.default
+    { home.username = "${userName}"; }
+  ];
+in
 {
-  description = "Users containment sub-flake";
-
-  inputs = {
-    home-manager = {
-      type = "github";
-      owner = "nix-community";
-      repo = "home-manager";
-      ref = "release-25.11";
-      inputs.nixpkgs.follows = "packages/nixpkgs";
-    };
-    packages = {
-      type = "path";
-      path = "./../packages";
-    };
-    homeModules = {
-      type = "path";
-      path = "./../modules/home";
-    };
-    stylixModules = {
-      type = "path";
-      path = "./../modules/stylix";
-    };
-    environments = {
-      type = "path";
-      path = "./../environments";
-    };
+  "frozenfox" = homeConfiguration {
+    pkgs = withSystem "x86_64-linux" fuyupkgs.nixpkgs;
+    modules =
+      (importUser "frozenfox")
+      ++ (with fuyupkgs; [
+        withAllOverlays
+        stylixModules.stylixModules.silly-kityo
+        environments.hyprlazer-desk.homeModules.default
+      ])
+      ++ (with fuyupkgs.homeModules; [
+        git
+        xdg
+        dunst
+        zsh
+        seanime
+        hyprsunset
+      ]);
   };
+};
 
-  outputs =
-    {
-      home-manager,
-      packages,
-      homeModules,
-      stylixModules,
-      environments,
-      ...
-    }:
-    let
-      homeConfiguration = home-manager.lib.homeManagerConfiguration;
-      importUser = userName: [
-        ./${userName}
-        homeModules.homeModules.default
-        { home.username = "${userName}"; }
-      ];
-    in
-    {
-      homeConfigurations = {
-        "frozenfox" = homeConfiguration {
-          pkgs = packages.withSystem "x86_64-linux" packages.nixpkgs;
-          modules =
-            (importUser "frozenfox")
-            ++ (with homeModules.homeModules; [
-              packages.withAllOverlays
-              stylixModules.stylixModules.silly-kityo
-              environments.hyprlazer-desk.homeModules.default
-              git
-              xdg
-              dunst
-              zsh
-              seanime
-              hyprsunset
-            ]);
-        };
-      };
-    };
-}

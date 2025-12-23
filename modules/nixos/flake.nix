@@ -1,29 +1,35 @@
+lib:
 {
-  description = "Nixos modules containment sub-flake";
-
-  inputs = {
-    packages = {
-      type = "path";
-      path = "../../packages";
+  starship.frosted-kebab = ./starship/frosted-kebab.nix;
+  default = {
+    boot = {
+      loader = {
+        systemd-boot.enable = true;
+        systemd-boot.editor = false;
+        efi.canTouchEfiVariables = true;
+        timeout = 25;
+      };
     };
-  };
 
-  outputs =
-    {
-      packages,
-      ...
-    }:
-    {
-      nixosModules = {
-        inherit (packages.nixosModules) copyparty;
-        starship.frosted-kebab = ./starship/frosted-kebab.nix;
-      }
-      // (packages.nixpkgs.lib.genAttrs [
-        "default"
-        "fonts"
-        "locale-es-cr"
-        "pipewire"
-        "steam"
-      ] (moduleName: ./${moduleName}.nix));
+    nix = {
+      settings.auto-optimise-store = true;
+      gc = {
+        automatic = true;
+        dates = "weekly";
+        options = "--delete-older-than 7d";
+      };
+      extraOptions = ''
+        experimental-features = nix-command flakes
+        keep-outputs = true
+        keep-derivations = true
+      '';
     };
+  }
 }
+// (lib.genAttrs [
+  "fonts"
+  "locale-es-cr"
+  "pipewire"
+  "steam"
+] (moduleName: ./${moduleName}.nix));
+

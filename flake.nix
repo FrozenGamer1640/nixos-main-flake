@@ -1,23 +1,21 @@
 {
   inputs = {
-    hosts = {
+    fuyupkgs = {
       type = "path";
-      path = "./hosts";
-    };
-    users = {
-      type = "path";
-      path = "./users";
+      path = "./packages";
     };
   };
 
   outputs =
     {
-      hosts,
-      users,
+      fuyupkgs,
       ...
     }:
+    let
+      environments = import ./environments fuyupkgs;
+    in
     {
-      inherit (hosts) nixosConfigurations;
-      inherit (users) homeConfigurations;
+      nixosConfigurations = import ./hosts fuyupkgs environments;
+      homeConfigurations = import ./users fuyupkgs environments;
     };
 }

@@ -1,59 +1,30 @@
+fuyupkgs: environments:
+let
+  inherit (fuyupkgs) withSystem;
+  importHost = hostName: [
+    ./${hostName}
+    ./${hostName}/hardware-configuration.nix
+    fuyupkgs.nixosModules.default
+  ];
+in
 {
-  description = "Hosts containment sub-flake";
-
-  inputs = {
-    packages = {
-      type = "path";
-      path = "./../packages";
-    };
-    nixosModules = {
-      type = "path";
-      path = "./../modules/nixos";
-    };
-    stylixModules = {
-      type = "path";
-      path = "./../modules/stylix";
-    };
-    environments = {
-      type = "path";
-      path = "./../environments";
-    };
+  # This one is an HP Pavillion (Gaming) Laptop btw
+  pavillion = fuyupkgs.nixpkgs.lib.nixosSystem {
+    pkgs = withSystem "x86_64-linux" fuyupkgs.nixpkgs;
+    modules =
+      (importHost "pavillion")
+      ++ (with fuyupkgs; [
+        withAllOverlays
+        stylixModules.silly-kityo
+        environments.hyprlazer-desk.nixosModules.default
+      ])
+      ++ (with fuyupkgs.nixosModules; [
+        copyparty
+        fonts
+        locale-es-cr
+        pipewire
+        steam
+      ]);
   };
+};
 
-  outputs =
-    {
-      packages,
-      nixosModules,
-      stylixModules,
-      environments,
-      ...
-    }:
-    let
-      withSystem = packages.withSystem;
-      importHost = hostName: [
-        ./${hostName}
-        ./${hostName}/hardware-configuration.nix
-        nixosModules.nixosModules.default
-      ];
-    in
-    {
-      nixosConfigurations = {
-        # This one is an HP Pavillion (Gaming) Laptop btw
-        pavillion = packages.nixpkgs.lib.nixosSystem {
-          pkgs = withSystem "x86_64-linux" packages.nixpkgs;
-          modules =
-            (importHost "pavillion")
-            ++ (with nixosModules.nixosModules; [
-              packages.withAllOverlays
-              stylixModules.stylixModules.silly-kityo
-              environments.hyprlazer-desk.nixosModules.default
-              copyparty
-              fonts
-              locale-es-cr
-              pipewire
-              steam
-            ]);
-        };
-      };
-    };
-}
