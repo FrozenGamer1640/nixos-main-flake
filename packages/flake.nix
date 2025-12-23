@@ -26,7 +26,7 @@
       owner = "nix-community";
       repo = "stylix";
       ref = "release-25.11";
-      inputs.nixpkgs.follows = "packages/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
       type = "github";
@@ -102,8 +102,8 @@
       // (import ../modules/nixos self.nixpkgs.lib);
 
       homeModules = {
-	inherit (inputs.stylix.homeModules) stylix;
-        seanime = inputs.seanime.nixosModules.default;
+        inherit (inputs.stylix.homeModules) stylix;
+	inherit (inputs.seanime.nixosModules) seanime;
       }
       // (import ../modules/home self.nixpkgs.lib);
 

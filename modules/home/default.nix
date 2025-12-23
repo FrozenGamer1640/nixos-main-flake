@@ -12,5 +12,5 @@ lib:
   "xdg"
   "zed-editor"
   "hyprsunset"
-] (moduleName: ./${moduleName}));
+] (moduleName: ./${moduleName}))
 

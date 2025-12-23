@@ -24,12 +24,12 @@ lib:
         keep-derivations = true
       '';
     };
-  }
+  };
 }
 // (lib.genAttrs [
   "fonts"
   "locale-es-cr"
   "pipewire"
   "steam"
-] (moduleName: ./${moduleName}.nix));
+] (moduleName: ./${moduleName}.nix))
 
