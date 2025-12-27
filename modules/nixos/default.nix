@@ -1,6 +1,9 @@
 lib:
 {
   starship.frosted-kebab = ./starship/frosted-kebab.nix;
+  nixvim-profiles = {
+    frosted-editor = ./nixvim/frosted-editor;
+  };
   default = {
     boot = {
       loader = {

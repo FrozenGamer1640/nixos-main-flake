@@ -24,6 +24,8 @@ in
         locale-es-cr
         pipewire
         steam
+        nixvim
+        nixvim-profiles.frosted-editor
       ]);
   };
 }

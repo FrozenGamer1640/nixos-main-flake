@@ -28,6 +28,12 @@
       ref = "release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      type = "github";
+      owner = "nix-community";
+      repo = "nixvim";
+      ref = "nixos-25.11";
+    };
     hyprland = {
       type = "github";
       owner = "hyprwm";
@@ -96,14 +102,15 @@
       };
 
       nixosModules = {
-	inherit (inputs.stylix.nixosModules) stylix;
+        inherit (inputs.stylix.nixosModules) stylix;
+        inherit (inputs.nixvim.nixosModules) nixvim;
         copyparty = inputs.copyparty.nixosModules.default;
       }
       // (import ../modules/nixos self.nixpkgs.lib);
 
       homeModules = {
         inherit (inputs.stylix.homeModules) stylix;
-	inherit (inputs.seanime.nixosModules) seanime;
+        inherit (inputs.seanime.nixosModules) seanime;
       }
       // (import ../modules/home self.nixpkgs.lib);
 

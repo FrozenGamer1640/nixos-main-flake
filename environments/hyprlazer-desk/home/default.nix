@@ -9,7 +9,7 @@
     ./kitty
     ./vesktop
     ./zed-editor
-    ./neovim
+    # ./neovim
   ];
 
   services = {

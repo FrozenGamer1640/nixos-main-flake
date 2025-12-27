@@ -15,7 +15,7 @@ in
       (importUser "frozenfox")
       ++ (with fuyupkgs; [
         withAllOverlays
-        fuyupkgs.stylixModules.silly-kityo
+        stylixModules.silly-kityo
         environments.hyprlazer-desk.homeModules.default
       ])
       ++ (with fuyupkgs.homeModules; [

@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   ...
 }:
 {
@@ -43,10 +44,10 @@
       enable = true;
       openFirewall = true;
     };
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
+    # neovim = {
+      # enable = true;
+      # defaultEditor = lib.mkDefault true;
+    # };
   };
 
   environment.systemPackages = with pkgs; [
