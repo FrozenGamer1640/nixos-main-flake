@@ -16,7 +16,7 @@ in
       ++ (with fuyupkgs; [
         withAllOverlays
         stylixModules.silly-kityo
-        environments.kool-land.homeModules.default
+        environments.hyprlazer-desk.homeModules.default
       ])
       ++ (with fuyupkgs.homeModules; [
         git

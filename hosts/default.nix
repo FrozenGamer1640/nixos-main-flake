@@ -16,7 +16,7 @@ in
       ++ (with fuyupkgs; [
         withAllOverlays
         stylixModules.silly-kityo
-        environments.kool-land.nixosModules.default
+        environments.hyprlazer-desk.nixosModules.default
       ])
       ++ (with fuyupkgs.nixosModules; [
         copyparty
