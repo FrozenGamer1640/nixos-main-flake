@@ -1,9 +1,11 @@
+pragma Singleton
+
 import Quickshell // for PanelWindow
 import Quickshell.Io
 import QtQuick // for Text
 
 
-Scope {
+Singleton {
   id: root
 
   Variants {
