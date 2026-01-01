@@ -1,8 +1,8 @@
 pragma Singleton
 
-import Quickshell // for PanelWindow
+import Quickshell
 import Quickshell.Io
-import QtQuick // for Text
+import QtQuick
 
 
 Singleton {
@@ -15,6 +15,7 @@ Singleton {
       required property var modelData
 
       screen: modelData
+      implicitHeight: 30
 
       anchors {
         top: true
@@ -22,11 +23,14 @@ Singleton {
         right: true
       }
 
-      implicitHeight: 30
-
-      Text {
-        anchors.centerIn: parent
-        text: Qt.formatDateTime(root.clock.date, "hh:mm:ss ap - yyyy/MM/dd")
+      Row {
+        Text { text: "placeholder" }
+        Row {
+          Text {
+            anchors.centerIn: parent
+            text: Qt.formatDateTime(root.clock.date, "hh:mm:ss ap - yyyy/MM/dd")
+          }
+        }
       }
     }
   }
