@@ -2,6 +2,7 @@
   programs.quickshell = {
     enable = true;
     systemd.enable = true;
-    configs."default" = ./bar;
+    configs."default" = ./config;
   };
 }
+
